@@ -1,4 +1,5 @@
 ﻿using Consualtance_Manage.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -6,6 +7,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Numerics;
 using System.Security.Claims;
+using System.Security.Cryptography;
 using System.Text;
 
 namespace Consualtance_Manage.Controllers
@@ -22,7 +24,6 @@ namespace Consualtance_Manage.Controllers
             _userContext = userContext;
             _configuration = configuration;
         }
-
         [HttpPost("Register")]
         public async Task<ActionResult<UserDTO>> Register(UserDTO userDTO)
         {
@@ -60,7 +61,35 @@ namespace Consualtance_Manage.Controllers
 
             string token = CreateToken(registeredUser);
 
+            var refrechTokens = GenerateRefreashToken();
+            SetRefreashToken(refrechTokens, registeredUser);
+
             return Ok(token);
+        }
+
+        private RefreashToken GenerateRefreashToken()
+        {
+            var refrechTokens = new RefreashToken
+            {
+                Token = Convert.ToBase64String(RandomNumberGenerator.GetBytes(64)),
+                Expired = DateTime.Now.AddDays(7)
+
+            };
+            return refrechTokens;
+        }
+
+        private void SetRefreashToken(RefreashToken newRefreashToken , User registeredUser)
+        {
+            var cookieOptions = new CookieOptions
+            {
+                HttpOnly = true,
+                Expires = newRefreashToken.Expired
+            };
+            Response.Cookies.Append("refreashToken", newRefreashToken.Token, cookieOptions);
+
+            registeredUser.refreashToken = newRefreashToken.Token;
+            registeredUser.TokenExpires = newRefreashToken.Expired;
+            registeredUser.createdToken = newRefreashToken.Created;
         }
 
         private string CreateToken(User user)
@@ -72,6 +101,8 @@ namespace Consualtance_Manage.Controllers
                 new Claim(ClaimTypes.MobilePhone, user.Phone), // Correct claim type for phone
                 new Claim(ClaimTypes.Role, user.RoleManager) // Correct role claim
             };
+
+           
 
             // Get JWT secret key from configuration
             string? keyString = _configuration["JwtSettings:Key"];
@@ -88,7 +119,7 @@ namespace Consualtance_Manage.Controllers
                 issuer: _configuration["JwtSettings:Issuer"],
                 audience: _configuration["JwtSettings:Audience"],
                 claims: claims,
-                expires: DateTime.UtcNow.AddDays(1),
+                expires: DateTime.UtcNow.AddHours(1),
                 signingCredentials: creds
             );
 

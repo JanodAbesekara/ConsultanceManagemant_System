@@ -19,5 +19,10 @@ namespace Consualtance_Manage.Models
 
         public string RoleManager { get; set; }
 
-}
+        public string refreashToken { get; set; } = string.Empty;
+        public DateTime createdToken { get; set; } 
+
+        public DateTime TokenExpires { get; set; }
+
+    }
 }

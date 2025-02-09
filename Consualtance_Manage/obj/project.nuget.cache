@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hf99oARHTRc=",
+  "dgSpecHash": "cfU7jfqvsd4=",
   "success": true,
-  "projectFilePath": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\Consualtance_Manage\\Consualtance_Manage.csproj",
+  "projectFilePath": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Consualtance_Manage.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Janod Abesekara\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Janod Abesekara\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

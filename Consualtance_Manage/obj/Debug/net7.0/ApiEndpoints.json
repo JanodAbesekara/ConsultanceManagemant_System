@@ -13,17 +13,17 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Consualtance_Manage.Controllers.UserAuthController",
-    "Method": "RefreshToken",
-    "RelativePath": "api/UserAuth/RefreshToken",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "Consualtance_Manage.Controllers.UserAuthController",

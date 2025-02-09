@@ -17,11 +17,4 @@
 
     }
 
-    public class RefreashToken
-    {
-        public required string AccessToken { get; set; }
-        public required DateTime CreatedDate { get; set; }
-        public required DateTime ExitDate { get; set; }
-
-    }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\Consualtance_Manage\\Consualtance_Manage.csproj": {}
+    "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Consualtance_Manage.csproj": {}
   },
   "projects": {
-    "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\Consualtance_Manage\\Consualtance_Manage.csproj": {
+    "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Consualtance_Manage.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\Consualtance_Manage\\Consualtance_Manage.csproj",
+        "projectUniqueName": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Consualtance_Manage.csproj",
         "projectName": "Consualtance_Manage",
-        "projectPath": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\Consualtance_Manage\\Consualtance_Manage.csproj",
+        "projectPath": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Consualtance_Manage.csproj",
         "packagesPath": "C:\\Users\\Janod Abesekara\\.nuget\\packages\\",
-        "outputPath": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\Consualtance_Manage\\obj\\",
+        "outputPath": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Janod Abesekara\\AppData\\Roaming\\NuGet\\NuGet.Config",
