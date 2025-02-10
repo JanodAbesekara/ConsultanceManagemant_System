@@ -27,6 +27,14 @@ namespace Consualtance_Manage.Controllers
         [HttpPost("Register")]
         public async Task<ActionResult<UserDTO>> Register(UserDTO userDTO)
         {
+
+            var olduser = await _userContext.User.FirstOrDefaultAsync(x=> x.Email == userDTO.Email);
+
+            if(olduser != null)
+            {
+                return BadRequest("Allready registed User !");
+            }
+
             string hashedPassword = BCrypt.Net.BCrypt.HashPassword(userDTO.Password);
 
             User newUser = new User
@@ -38,16 +46,23 @@ namespace Consualtance_Manage.Controllers
                 RoleManager = userDTO.RoleManager
             };
 
-            await _userContext.Users.AddAsync(newUser);
+            await _userContext.User.AddAsync(newUser);
             await _userContext.SaveChangesAsync();
 
             return Ok(newUser);
         }
 
+        [HttpGet("GetAllUsers")]
+        public async Task<ActionResult<List<User>>> GetAllUsers()
+        {
+            var users = await _userContext.User.ToListAsync();
+            return Ok(users);
+        }
+
         [HttpPost("Login")]
         public async Task<ActionResult<string>> LoginUser(LoginDTO loginUser)
         {
-            var registeredUser = await _userContext.Users.FirstOrDefaultAsync(x => x.Email == loginUser.Email);
+            var registeredUser = await _userContext.User.FirstOrDefaultAsync(x => x.Email == loginUser.Email);
 
             if (registeredUser == null)
             {
@@ -64,9 +79,12 @@ namespace Consualtance_Manage.Controllers
             var refrechTokens = GenerateRefreashToken();
             SetRefreashToken(refrechTokens, registeredUser);
 
+            await _userContext.SaveChangesAsync();
+
             return Ok(token);
         }
 
+ 
         private RefreashToken GenerateRefreashToken()
         {
             var refrechTokens = new RefreashToken
@@ -98,8 +116,8 @@ namespace Consualtance_Manage.Controllers
             {
                 new Claim(ClaimTypes.Name, user.Name),
                 new Claim(ClaimTypes.Email, user.Email),
-                new Claim(ClaimTypes.MobilePhone, user.Phone), // Correct claim type for phone
-                new Claim(ClaimTypes.Role, user.RoleManager) // Correct role claim
+                new Claim(ClaimTypes.MobilePhone, user.Phone), 
+                new Claim(ClaimTypes.Role, user.RoleManager) 
             };
 
            

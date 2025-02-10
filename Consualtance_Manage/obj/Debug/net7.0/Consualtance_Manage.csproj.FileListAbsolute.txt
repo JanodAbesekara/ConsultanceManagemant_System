@@ -154,3 +154,4 @@ D:\own project\New folder (2)\ConsultanceManage_APP\ConsultanceManagemant_System
 D:\own project\New folder (2)\ConsultanceManage_APP\ConsultanceManagemant_System\Consualtance_Manage\obj\Debug\net7.0\Consualtance_Manage.pdb
 D:\own project\New folder (2)\ConsultanceManage_APP\ConsultanceManagemant_System\Consualtance_Manage\obj\Debug\net7.0\Consualtance_Manage.genruntimeconfig.cache
 D:\own project\New folder (2)\ConsultanceManage_APP\ConsultanceManagemant_System\Consualtance_Manage\obj\Debug\net7.0\ref\Consualtance_Manage.dll
+D:\own project\New folder (2)\ConsultanceManage_APP\ConsultanceManagemant_System\Consualtance_Manage\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

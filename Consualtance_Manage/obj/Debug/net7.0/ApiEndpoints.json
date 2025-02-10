@@ -1,6 +1,26 @@
 [
   {
     "ContainingType": "Consualtance_Manage.Controllers.UserAuthController",
+    "Method": "GetAllUsers",
+    "RelativePath": "api/UserAuth/GetAllUsers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Consualtance_Manage.Models.User, Consualtance_Manage, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Consualtance_Manage.Controllers.UserAuthController",
     "Method": "LoginUser",
     "RelativePath": "api/UserAuth/Login",
     "HttpMethod": "POST",
