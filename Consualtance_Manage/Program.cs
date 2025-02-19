@@ -1,3 +1,4 @@
+using Consualtance_Manage.Context;
 using Consualtance_Manage.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -17,6 +18,14 @@ builder.Services.AddDbContext<UserContext>(options =>
 
 builder.Services.AddDbContext<RefreashTokenContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddDbContext<PatientContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddDbContext<DoctorContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+
 
 var app = builder.Build();
 

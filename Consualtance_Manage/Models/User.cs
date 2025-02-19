@@ -24,5 +24,6 @@ namespace Consualtance_Manage.Models
 
         public DateTime TokenExpires { get; set; }
 
+
     }
 }

@@ -1,14 +1,12 @@
 ﻿using Consualtance_Manage.Models;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
-using System.Numerics;
 using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
+
 
 namespace Consualtance_Manage.Controllers
 {
@@ -53,11 +51,22 @@ namespace Consualtance_Manage.Controllers
         }
 
         [HttpGet("GetAllUsers")]
-        public async Task<ActionResult<List<User>>> GetAllUsers()
+        public async Task<ActionResult<List<Getallusers>>> GetAllUsers()
         {
             var users = await _userContext.User.ToListAsync();
-            return Ok(users);
+
+            var SendTofrontend = users.Select(user => new Getallusers
+            {
+                Id = user.Id,
+                Email = user.Email,
+                Name = user.Name,
+                Phone = user.Phone,
+                RoleManager = user.RoleManager,
+            }).ToList();
+
+            return Ok(SendTofrontend);
         }
+
 
         [HttpPost("Login")]
         public async Task<ActionResult<string>> LoginUser(LoginDTO loginUser)
