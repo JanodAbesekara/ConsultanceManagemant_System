@@ -1,5 +1,4 @@
 using Consualtance_Manage.Context;
-using Consualtance_Manage.Models;
 using Microsoft.EntityFrameworkCore;
 
 

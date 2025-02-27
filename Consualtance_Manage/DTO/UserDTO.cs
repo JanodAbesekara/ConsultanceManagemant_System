@@ -1,4 +1,4 @@
-﻿namespace Consualtance_Manage.Models
+﻿namespace Consualtance_Manage.DTO
 {
     public class UserDTO
     {
@@ -12,7 +12,7 @@
 
     public class LoginDTO
     {
-        public required string Email {get;set;}
+        public required string Email { get; set; }
         public required string Password { get; set; }
 
     }

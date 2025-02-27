@@ -1,6 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Consualtance_Manage.Models;
+using Microsoft.EntityFrameworkCore;
 
-namespace Consualtance_Manage.Models
+namespace Consualtance_Manage.Context
 {
     public class RefreashTokenContext : DbContext
     {

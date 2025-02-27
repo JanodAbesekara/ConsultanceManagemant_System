@@ -1,4 +1,6 @@
-﻿using Consualtance_Manage.Models;
+﻿using Consualtance_Manage.Context;
+using Consualtance_Manage.DTO;
+using Consualtance_Manage.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
