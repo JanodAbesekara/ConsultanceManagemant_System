@@ -7,7 +7,7 @@
         public required string Password { get; set; }
         public required string Phone { get; set; }
 
-        public required string RoleManager { get; set; }
+        public required string ? RoleManager { get; set; }
     }
 
     public class LoginDTO

@@ -6,7 +6,7 @@ namespace Consualtance_Manage.Models
     public class Ratings
     {
         [Key]
-        public int Id { get; set; }
+        public int RatingId { get; set; }
 
         [Required]
         public int Rating { get; set; }
@@ -20,6 +20,6 @@ namespace Consualtance_Manage.Models
 
         [ForeignKey("patient")]
         public int PatientId { get; set; }
-        public patient patient { get; set; }
+        public Patient patient { get; set; }
     }
 }

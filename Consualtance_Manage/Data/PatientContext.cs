@@ -9,6 +9,6 @@ namespace Consualtance_Manage.Context
         {
 
         }
-        public DbSet<patient> Patients { get; set; }
+        public DbSet<Patient> Patients { get; set; }
     }
 }

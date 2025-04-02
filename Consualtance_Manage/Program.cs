@@ -1,4 +1,5 @@
 using Consualtance_Manage.Context;
+using Consualtance_Manage.Data;
 using Microsoft.EntityFrameworkCore;
 
 
@@ -12,18 +13,8 @@ builder.Services.AddSwaggerGen();
 
 
 // configer the DB connection 
-builder.Services.AddDbContext<UserContext>(options =>
+builder.Services.AddDbContext<ApplicationContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-
-builder.Services.AddDbContext<RefreashTokenContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-
-builder.Services.AddDbContext<PatientContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-
-builder.Services.AddDbContext<DoctorContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-
 
 
 var app = builder.Build();

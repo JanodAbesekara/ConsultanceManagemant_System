@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Consualtance_Manage.Models
@@ -9,27 +10,28 @@ namespace Consualtance_Manage.Models
         public int AppointmentId { get; set; }
 
         [Required]
-        public DateTime AppoinmetDate { get; set; }
+        public DateTime AppointmentDate { get; set; } 
+
         [Required]
-        public string StartTime { get; set; }
+        public TimeSpan StartTime { get; set; }  
+
         [Required]
-        public string EndTime { get; set; }
+        public TimeSpan EndTime { get; set; }  
 
         [Required]
         public string Status { get; set; } = "Available";
 
         [ForeignKey("DoctorDetails")]
-        public int DoctorId { get; set; } 
-        public  DoctorDetails DoctorDetails { get; set; }
+        public int DoctorId { get; set; }
 
-        [ForeignKey("patient")]
-        public int? patientid { get; set; }
-        public patient patient { get; set; }
+        public virtual DoctorDetails DoctorDetails { get; set; }  
 
-        // forgin keys
+        [ForeignKey("Patient")]
+        public int? PatientId { get; set; } 
+
+        public virtual Patient patient { get; set; } 
+
+        // Foreign key for session link
         public virtual AddtheSessionLink AddtheSessionLink { get; set; }
-
-
-
     }
 }

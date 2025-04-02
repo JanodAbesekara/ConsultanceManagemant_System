@@ -1,15 +1,21 @@
 [
   {
-    "ContainingType": "Consualtance_Manage.Controllers.UserAuthController",
-    "Method": "GetAllUsers",
-    "RelativePath": "api/UserAuth/GetAllUsers",
-    "HttpMethod": "GET",
+    "ContainingType": "Consualtance_Manage.Controllers.PatientController",
+    "Method": "AddPatient",
+    "RelativePath": "api/Patient/AddPatient",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "patientDTO",
+        "Type": "Consualtance_Manage.DTO.PatientDTO",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[Consualtance_Manage.Models.Getallusers, Consualtance_Manage, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "Consualtance_Manage.DTO.PatientDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -28,8 +34,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "loginUser",
-        "Type": "Consualtance_Manage.Models.LoginDTO",
+        "Name": "loginDTO",
+        "Type": "Consualtance_Manage.DTO.LoginDTO",
         "IsRequired": true
       }
     ],
@@ -47,7 +53,7 @@
   },
   {
     "ContainingType": "Consualtance_Manage.Controllers.UserAuthController",
-    "Method": "Register",
+    "Method": "RegistersUser",
     "RelativePath": "api/UserAuth/Register",
     "HttpMethod": "POST",
     "IsController": true,
@@ -55,13 +61,13 @@
     "Parameters": [
       {
         "Name": "userDTO",
-        "Type": "Consualtance_Manage.Models.UserDTO",
+        "Type": "Consualtance_Manage.DTO.UserDTO",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "Consualtance_Manage.Models.UserDTO",
+        "Type": "Consualtance_Manage.DTO.UserDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",

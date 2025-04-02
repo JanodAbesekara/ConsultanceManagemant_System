@@ -20,7 +20,7 @@ namespace Consualtance_Manage.Models
         public string Password { get; set; }
         public string Phone { get; set; }
 
-        public string RoleManager { get; set; }
+        public string ? RoleManager { get; set; }
 
         public string refreashToken { get; set; } = string.Empty;
         public DateTime createdToken { get; set; } 
@@ -29,7 +29,7 @@ namespace Consualtance_Manage.Models
 
 
         // one to one relationship
-        public virtual patient patient { get; set; }
+        public virtual Patient patient { get; set; }
 
         // one to one relationship
         public virtual DoctorDetails DoctorDetails { get; set; }
