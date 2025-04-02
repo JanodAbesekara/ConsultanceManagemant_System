@@ -1,12 +1,16 @@
-﻿using Consualtance_Manage.Models;
+﻿using Consualtance_Manage.Context;
+using Consualtance_Manage.Data;
+using Consualtance_Manage.DTO;
+using Consualtance_Manage.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Numerics;
 using System.Security.Claims;
+using System.Security.Cryptography;
 using System.Text;
+
 
 namespace Consualtance_Manage.Controllers
 {
@@ -14,66 +18,90 @@ namespace Consualtance_Manage.Controllers
     [ApiController]
     public class UserAuthController : Controller
     {
-        private readonly UserContext _userContext;
+        private readonly ApplicationContext _userContext;
         private readonly IConfiguration _configuration;
 
-        public UserAuthController(UserContext userContext, IConfiguration configuration)
+        public UserAuthController(ApplicationContext userContext,IConfiguration configuration)
         {
             _userContext = userContext;
             _configuration = configuration;
         }
 
         [HttpPost("Register")]
-        public async Task<ActionResult<UserDTO>> Register(UserDTO userDTO)
+        public async Task<ActionResult<UserDTO>> RegistersUser(UserDTO userDTO)
         {
-            string hashedPassword = BCrypt.Net.BCrypt.HashPassword(userDTO.Password);
-
-            User newUser = new User
+            try
             {
-                Name = userDTO.Name,
-                Email = userDTO.Email,
-                Password = hashedPassword,
-                Phone = userDTO.Phone,
-                RoleManager = userDTO.RoleManager
-            };
+                var oldUser = await _userContext.Users.FirstOrDefaultAsync(x => x.Email == userDTO.Email);
+                if (oldUser != null)
+                {
+                    return BadRequest("User already registered");
+                }
 
-            await _userContext.Users.AddAsync(newUser);
-            await _userContext.SaveChangesAsync();
+                string hashpassword = BCrypt.Net.BCrypt.HashPassword(userDTO.Password);
 
-            return Ok(newUser);
+                User newUser = new User
+                {
+                    Name = userDTO.Name,
+                    Email = userDTO.Email,
+                    Password = hashpassword,
+                    Phone = userDTO.Phone,
+                    RoleManager = userDTO.RoleManager.ToString(),
+                };
+
+                await _userContext.Users.AddAsync(newUser);
+                await _userContext.SaveChangesAsync();
+
+                return Ok(newUser);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
         }
-
         [HttpPost("Login")]
-        public async Task<ActionResult<string>> LoginUser(LoginDTO loginUser)
+        public async Task<ActionResult<string>> LoginUser(LoginDTO loginDTO)
         {
-            var registeredUser = await _userContext.Users.FirstOrDefaultAsync(x => x.Email == loginUser.Email);
-
-            if (registeredUser == null)
+            try
             {
-                return BadRequest("User not registered");
-            }
+               
+                User RegistedUser = await _userContext.Users.FirstOrDefaultAsync(x => x.Email == loginDTO.Email);
+                 
+                if(RegistedUser == null)
+                {
+                    return BadRequest("User not registed");
+                }
 
-            if (!BCrypt.Net.BCrypt.Verify(loginUser.Password, registeredUser.Password))
+                if(!BCrypt.Net.BCrypt.Verify(loginDTO.Password , RegistedUser.Password))
+                {
+                    return BadRequest("Password Is not correcetd");
+                }
+                string token = createToken(RegistedUser);
+
+                return Ok(token);
+            }
+            catch (Exception e)
             {
-                return BadRequest("Incorrect password");
+                return StatusCode(500, $"Internal Sever Error ${e}");
             }
-
-            string token = CreateToken(registeredUser);
-
-            return Ok(token);
         }
 
-        private string CreateToken(User user)
+        private string createToken(User user)
         {
             var claims = new List<Claim>
             {
-                new Claim(ClaimTypes.Name, user.Name),
-                new Claim(ClaimTypes.Email, user.Email),
-                new Claim(ClaimTypes.MobilePhone, user.Phone), // Correct claim type for phone
-                new Claim(ClaimTypes.Role, user.RoleManager) // Correct role claim
+                new Claim(ClaimTypes.Name,user.Name),
+                new Claim(ClaimTypes.Email,user.Email),
+                new Claim(ClaimTypes.Role, user.RoleManager),
             };
 
-            // Get JWT secret key from configuration
+            var permissions = CheckRoleBasedPermissions.GetPermissionsByRole(user.RoleManager);
+
+            foreach (var permission in permissions)
+            {
+                claims.Add(new Claim("Permission", permission));
+            }
+
             string? keyString = _configuration["JwtSettings:Key"];
             if (string.IsNullOrEmpty(keyString) || keyString.Length < 64)
             {
@@ -94,5 +122,6 @@ namespace Consualtance_Manage.Controllers
 
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
+
     }
 }
