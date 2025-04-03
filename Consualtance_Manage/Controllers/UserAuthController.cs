@@ -78,7 +78,7 @@ namespace Consualtance_Manage.Controllers
                 }
                 string token = createToken(RegistedUser);
 
-                return Ok(token);
+                return Ok(new { token });
             }
             catch (Exception e)
             {

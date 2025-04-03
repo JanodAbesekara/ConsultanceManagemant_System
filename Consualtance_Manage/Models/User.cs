@@ -7,7 +7,7 @@ namespace Consualtance_Manage.Models
     public enum RoleManager
     {
     Admin,
-    User,
+    Patient,
     Doctor
     }
     public class User
