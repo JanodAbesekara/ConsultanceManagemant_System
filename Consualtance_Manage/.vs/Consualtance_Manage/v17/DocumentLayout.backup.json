@@ -3,36 +3,80 @@
   "WorkspaceRootPath": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|d:\\own project\\new folder (2)\\consultancemanage_app\\consultancemanagemant_system\\consualtance_manage\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|d:\\own project\\new folder (2)\\consultancemanage_app\\consultancemanagemant_system\\consualtance_manage\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|solutionrelative:services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|d:\\own project\\new folder (2)\\consultancemanage_app\\consultancemanagemant_system\\consualtance_manage\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|d:\\own project\\new folder (2)\\consultancemanage_app\\consultancemanagemant_system\\consualtance_manage\\controllers\\patientcontrolller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|solutionrelative:controllers\\patientcontrolller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|d:\\own project\\new folder (2)\\consultancemanage_app\\consultancemanagemant_system\\consualtance_manage\\services\\emailsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|solutionrelative:services\\emailsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|d:\\own project\\new folder (2)\\consultancemanage_app\\consultancemanagemant_system\\consualtance_manage\\models\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|solutionrelative:models\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|d:\\own project\\new folder (2)\\consultancemanage_app\\consultancemanagemant_system\\consualtance_manage\\controllers\\doctordetailscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|solutionrelative:controllers\\doctordetailscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|d:\\own project\\new folder (2)\\consultancemanage_app\\consultancemanagemant_system\\consualtance_manage\\dto\\patientdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|solutionrelative:dto\\patientdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|d:\\own project\\new folder (2)\\consultancemanage_app\\consultancemanagemant_system\\consualtance_manage\\data\\applicationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|solutionrelative:data\\applicationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|d:\\own project\\new folder (2)\\consultancemanage_app\\consultancemanagemant_system\\consualtance_manage\\services\\mailrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|solutionrelative:services\\mailrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|d:\\own project\\new folder (2)\\consultancemanage_app\\consultancemanagemant_system\\consualtance_manage\\controllers\\userauthcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|solutionrelative:controllers\\userauthcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|d:\\own project\\new folder (2)\\consultancemanage_app\\consultancemanagemant_system\\consualtance_manage\\data\\appointmentcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|solutionrelative:data\\appointmentcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|d:\\own project\\new folder (2)\\consultancemanage_app\\consultancemanagemant_system\\consualtance_manage\\services\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|solutionrelative:services\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|d:\\own project\\new folder (2)\\consultancemanage_app\\consultancemanagemant_system\\consualtance_manage\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|d:\\own project\\new folder (2)\\consultancemanage_app\\consultancemanagemant_system\\consualtance_manage\\controllers\\patientcontrolller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|solutionrelative:controllers\\patientcontrolller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|d:\\own project\\new folder (2)\\consultancemanage_app\\consultancemanagemant_system\\consualtance_manage\\models\\doctordetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|solutionrelative:models\\doctordetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|d:\\own project\\new folder (2)\\consultancemanage_app\\consultancemanagemant_system\\consualtance_manage\\dto\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|solutionrelative:dto\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|d:\\own project\\new folder (2)\\consultancemanage_app\\consultancemanagemant_system\\consualtance_manage\\dto\\doctordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|solutionrelative:dto\\doctordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|d:\\own project\\new folder (2)\\consultancemanage_app\\consultancemanagemant_system\\consualtance_manage\\dto\\patientdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|solutionrelative:dto\\patientdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|d:\\own project\\new folder (2)\\consultancemanage_app\\consultancemanagemant_system\\consualtance_manage\\dto\\patientfulldetaildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|solutionrelative:dto\\patientfulldetaildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|d:\\own project\\new folder (2)\\consultancemanage_app\\consultancemanagemant_system\\consualtance_manage\\models\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|solutionrelative:models\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|d:\\own project\\new folder (2)\\consultancemanage_app\\consultancemanagemant_system\\consualtance_manage\\data\\applicationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|solutionrelative:data\\applicationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|d:\\own project\\new folder (2)\\consultancemanage_app\\consultancemanagemant_system\\consualtance_manage\\controllers\\acceptedresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|solutionrelative:controllers\\acceptedresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|d:\\own project\\new folder (2)\\consultancemanage_app\\consultancemanagemant_system\\consualtance_manage\\data\\appointmentcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|solutionrelative:data\\appointmentcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|d:\\own project\\new folder (2)\\consultancemanage_app\\consultancemanagemant_system\\consualtance_manage\\dto\\doctorpermisionsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -41,10 +85,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|d:\\own project\\new folder (2)\\consultancemanage_app\\consultancemanagemant_system\\consualtance_manage\\dto\\adminpermisionsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|solutionrelative:dto\\adminpermisionsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|d:\\own project\\new folder (2)\\consultancemanage_app\\consultancemanagemant_system\\consualtance_manage\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|d:\\own project\\new folder (2)\\consultancemanage_app\\consultancemanagemant_system\\consualtance_manage\\dto\\checkrolebasedpermisions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -65,10 +105,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|d:\\own project\\new folder (2)\\consultancemanage_app\\consultancemanagemant_system\\consualtance_manage\\models\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|solutionrelative:models\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|d:\\own project\\new folder (2)\\consultancemanage_app\\consultancemanagemant_system\\consualtance_manage\\models\\doctordetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|solutionrelative:models\\doctordetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|d:\\own project\\new folder (2)\\consultancemanage_app\\consultancemanagemant_system\\consualtance_manage\\models\\knowdglebase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -95,20 +131,8 @@
       "RelativeMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|solutionrelative:data\\addthesessionlinkcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|d:\\own project\\new folder (2)\\consultancemanage_app\\consultancemanagemant_system\\consualtance_manage\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|d:\\own project\\new folder (2)\\consultancemanage_app\\consultancemanagemant_system\\consualtance_manage\\data\\doctorcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|solutionrelative:data\\doctorcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|d:\\own project\\new folder (2)\\consultancemanage_app\\consultancemanagemant_system\\consualtance_manage\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|d:\\own project\\new folder (2)\\consultancemanage_app\\consultancemanagemant_system\\consualtance_manage\\dto\\doctordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|solutionrelative:dto\\doctordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|d:\\own project\\new folder (2)\\consultancemanage_app\\consultancemanagemant_system\\consualtance_manage\\data\\refreashtokencontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -158,46 +182,228 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "PatientControlller.cs",
-              "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Controllers\\PatientControlller.cs",
-              "RelativeDocumentMoniker": "Controllers\\PatientControlller.cs",
-              "ToolTip": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Controllers\\PatientControlller.cs*",
-              "RelativeToolTip": "Controllers\\PatientControlller.cs*",
-              "ViewState": "AgIAACYAAAAAAAAAAAAAABYAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T15:50:42.833Z",
+              "WhenOpened": "2025-04-14T16:36:27.028Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "EmailSettings.cs",
+              "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Services\\EmailSettings.cs",
+              "RelativeDocumentMoniker": "Services\\EmailSettings.cs",
+              "ToolTip": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Services\\EmailSettings.cs",
+              "RelativeToolTip": "Services\\EmailSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T16:30:24.01Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MailRequest.cs",
+              "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Services\\MailRequest.cs",
+              "RelativeDocumentMoniker": "Services\\MailRequest.cs",
+              "ToolTip": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Services\\MailRequest.cs",
+              "RelativeToolTip": "Services\\MailRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T16:28:20.632Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DoctorDetailsController.cs",
+              "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Controllers\\DoctorDetailsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DoctorDetailsController.cs",
+              "ToolTip": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Controllers\\DoctorDetailsController.cs",
+              "RelativeToolTip": "Controllers\\DoctorDetailsController.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAuwAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T16:49:44.019Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserAuthController.cs",
+              "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Controllers\\UserAuthController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UserAuthController.cs",
+              "ToolTip": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Controllers\\UserAuthController.cs",
+              "RelativeToolTip": "Controllers\\UserAuthController.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAAAEwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-08T13:13:03.467Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Services\\EmailService.cs",
+              "RelativeDocumentMoniker": "Services\\EmailService.cs",
+              "ToolTip": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Services\\EmailService.cs",
+              "RelativeToolTip": "Services\\EmailService.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwCAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T16:42:29.703Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\appsettings.json*",
+              "RelativeToolTip": "appsettings.json*",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-02-08T09:51:35.19Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IEmailService.cs",
+              "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Services\\IEmailService.cs",
+              "RelativeDocumentMoniker": "Services\\IEmailService.cs",
+              "ToolTip": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Services\\IEmailService.cs",
+              "RelativeToolTip": "Services\\IEmailService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T16:41:58.532Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "DoctorDTO.cs",
+              "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\DTO\\DoctorDTO.cs",
+              "RelativeDocumentMoniker": "DTO\\DoctorDTO.cs",
+              "ToolTip": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\DTO\\DoctorDTO.cs",
+              "RelativeToolTip": "DTO\\DoctorDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAsAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T14:55:16.566Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "appsettings.Development.json",
+              "ToolTip": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\appsettings.Development.json",
+              "RelativeToolTip": "appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-02-27T17:32:44.512Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "PatientFulldetailDTO.cs",
+              "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\DTO\\PatientFulldetailDTO.cs",
+              "RelativeDocumentMoniker": "DTO\\PatientFulldetailDTO.cs",
+              "ToolTip": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\DTO\\PatientFulldetailDTO.cs",
+              "RelativeToolTip": "DTO\\PatientFulldetailDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T16:21:20.506Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "DoctorDetails.cs",
+              "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Models\\DoctorDetails.cs",
+              "RelativeDocumentMoniker": "Models\\DoctorDetails.cs",
+              "ToolTip": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Models\\DoctorDetails.cs",
+              "RelativeToolTip": "Models\\DoctorDetails.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA4AAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-10T17:15:13.099Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "PatientDTO.cs",
               "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\DTO\\PatientDTO.cs",
               "RelativeDocumentMoniker": "DTO\\PatientDTO.cs",
               "ToolTip": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\DTO\\PatientDTO.cs",
               "RelativeToolTip": "DTO\\PatientDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-27T14:53:19.453Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AcceptedResult.cs",
-              "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Controllers\\AcceptedResult.cs",
-              "RelativeDocumentMoniker": "Controllers\\AcceptedResult.cs",
-              "ToolTip": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Controllers\\AcceptedResult.cs",
-              "RelativeToolTip": "Controllers\\AcceptedResult.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 9,
+              "Title": "PatientControlller.cs",
+              "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Controllers\\PatientControlller.cs",
+              "RelativeDocumentMoniker": "Controllers\\PatientControlller.cs",
+              "ToolTip": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Controllers\\PatientControlller.cs",
+              "RelativeToolTip": "Controllers\\PatientControlller.cs",
+              "ViewState": "AgIAAKIAAAAAAAAAAAAuwEwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-10T17:13:10.054Z",
+              "WhenOpened": "2025-03-07T15:50:42.833Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 11,
+              "Title": "UserDTO.cs",
+              "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\DTO\\UserDTO.cs",
+              "RelativeDocumentMoniker": "DTO\\UserDTO.cs",
+              "ToolTip": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\DTO\\UserDTO.cs",
+              "RelativeToolTip": "DTO\\UserDTO.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAswAcAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T13:38:51.816Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Patient.cs",
+              "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Models\\Patient.cs",
+              "RelativeDocumentMoniker": "Models\\Patient.cs",
+              "ToolTip": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Models\\Patient.cs",
+              "RelativeToolTip": "Models\\Patient.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAwBQAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T17:39:00.154Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ApplicationContext.cs",
+              "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Data\\ApplicationContext.cs",
+              "RelativeDocumentMoniker": "Data\\ApplicationContext.cs",
+              "ToolTip": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Data\\ApplicationContext.cs",
+              "RelativeToolTip": "Data\\ApplicationContext.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-10T16:42:01.051Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
               "Title": "AppointmentContext.cs",
               "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Data\\AppointmentContext.cs",
               "RelativeDocumentMoniker": "Data\\AppointmentContext.cs",
@@ -210,72 +416,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ApplicationContext.cs",
-              "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Data\\ApplicationContext.cs",
-              "RelativeDocumentMoniker": "Data\\ApplicationContext.cs",
-              "ToolTip": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Data\\ApplicationContext.cs",
-              "RelativeToolTip": "Data\\ApplicationContext.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAIwFoAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 17,
+              "Title": "AcceptedResult.cs",
+              "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Controllers\\AcceptedResult.cs",
+              "RelativeDocumentMoniker": "Controllers\\AcceptedResult.cs",
+              "ToolTip": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Controllers\\AcceptedResult.cs",
+              "RelativeToolTip": "Controllers\\AcceptedResult.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-10T16:42:01.051Z",
+              "WhenOpened": "2025-03-10T17:13:10.054Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UserAuthController.cs",
-              "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Controllers\\UserAuthController.cs",
-              "RelativeDocumentMoniker": "Controllers\\UserAuthController.cs",
-              "ToolTip": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Controllers\\UserAuthController.cs",
-              "RelativeToolTip": "Controllers\\UserAuthController.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAuwGUAAABAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-08T13:13:03.467Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Program.cs*",
-              "RelativeToolTip": "Program.cs*",
-              "ViewState": "AgIAABIAAAAAAAAAAAAUwCcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-27T17:31:20.709Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Patient.cs",
-              "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Models\\Patient.cs",
-              "RelativeDocumentMoniker": "Models\\Patient.cs",
-              "ToolTip": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Models\\Patient.cs",
-              "RelativeToolTip": "Models\\Patient.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T17:54:00.084Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "User.cs",
-              "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Models\\User.cs",
-              "RelativeDocumentMoniker": "Models\\User.cs",
-              "ToolTip": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Models\\User.cs",
-              "RelativeToolTip": "Models\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-10T17:13:46.842Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 23,
               "Title": "Ratings.cs",
               "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Models\\Ratings.cs",
               "RelativeDocumentMoniker": "Models\\Ratings.cs",
@@ -288,7 +442,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 19,
               "Title": "DoctorPermisionsDTO.cs",
               "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\DTO\\DoctorPermisionsDTO.cs",
               "RelativeDocumentMoniker": "DTO\\DoctorPermisionsDTO.cs",
@@ -301,7 +455,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 20,
               "Title": "AdminPermisionsDTO.cs",
               "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\DTO\\AdminPermisionsDTO.cs",
               "RelativeDocumentMoniker": "DTO\\AdminPermisionsDTO.cs",
@@ -314,7 +468,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 21,
               "Title": "CheckRolebasedPermisions.cs",
               "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\DTO\\CheckRolebasedPermisions.cs",
               "RelativeDocumentMoniker": "DTO\\CheckRolebasedPermisions.cs",
@@ -327,7 +481,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 22,
               "Title": "PatientPermisionsDTO.cs",
               "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\DTO\\PatientPermisionsDTO.cs",
               "RelativeDocumentMoniker": "DTO\\PatientPermisionsDTO.cs",
@@ -340,7 +494,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 25,
               "Title": "Appointment.cs",
               "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Models\\Appointment.cs",
               "RelativeDocumentMoniker": "Models\\Appointment.cs",
@@ -348,11 +502,12 @@
               "RelativeToolTip": "Models\\Appointment.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAAkwB8AAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-10T17:13:32.684Z"
+              "WhenOpened": "2025-03-10T17:13:32.684Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 24,
               "Title": "AddtheSessionLink.cs",
               "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Models\\AddtheSessionLink.cs",
               "RelativeDocumentMoniker": "Models\\AddtheSessionLink.cs",
@@ -360,11 +515,12 @@
               "RelativeToolTip": "Models\\AddtheSessionLink.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAxwA8AAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-26T15:52:04.484Z"
+              "WhenOpened": "2025-02-26T15:52:04.484Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 41,
               "Title": "20250310171637_InitialCreate.cs",
               "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Migrations\\20250310171637_InitialCreate.cs",
               "RelativeDocumentMoniker": "Migrations\\20250310171637_InitialCreate.cs",
@@ -372,11 +528,12 @@
               "RelativeToolTip": "Migrations\\20250310171637_InitialCreate.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-10T17:16:37.955Z"
+              "WhenOpened": "2025-03-10T17:16:37.955Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 28,
               "Title": "RatingDTO.cs",
               "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\DTO\\RatingDTO.cs",
               "RelativeDocumentMoniker": "DTO\\RatingDTO.cs",
@@ -384,23 +541,12 @@
               "RelativeToolTip": "DTO\\RatingDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T15:06:09.156Z"
+              "WhenOpened": "2025-02-19T15:06:09.156Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "DoctorDetails.cs",
-              "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Models\\DoctorDetails.cs",
-              "RelativeDocumentMoniker": "Models\\DoctorDetails.cs",
-              "ToolTip": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Models\\DoctorDetails.cs",
-              "RelativeToolTip": "Models\\DoctorDetails.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-10T17:15:13.099Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 26,
               "Title": "KnowdgleBase.cs",
               "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Models\\KnowdgleBase.cs",
               "RelativeDocumentMoniker": "Models\\KnowdgleBase.cs",
@@ -408,11 +554,12 @@
               "RelativeToolTip": "Models\\KnowdgleBase.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-27T17:11:16.785Z"
+              "WhenOpened": "2025-02-27T17:11:16.785Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 27,
               "Title": "PatientContext.cs",
               "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Data\\PatientContext.cs",
               "RelativeDocumentMoniker": "Data\\PatientContext.cs",
@@ -420,11 +567,12 @@
               "RelativeToolTip": "Data\\PatientContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T16:56:31.595Z"
+              "WhenOpened": "2025-02-19T16:56:31.595Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 29,
               "Title": "UserContext.cs",
               "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Data\\UserContext.cs",
               "RelativeDocumentMoniker": "Data\\UserContext.cs",
@@ -432,23 +580,12 @@
               "RelativeToolTip": "Data\\UserContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-08T09:47:08.636Z"
+              "WhenOpened": "2025-02-08T09:47:08.636Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-02-08T09:51:35.19Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 32,
               "Title": "DoctorContext.cs",
               "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Data\\DoctorContext.cs",
               "RelativeDocumentMoniker": "Data\\DoctorContext.cs",
@@ -456,23 +593,23 @@
               "RelativeToolTip": "Data\\DoctorContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T17:01:59.825Z"
+              "WhenOpened": "2025-02-19T17:01:59.825Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 30,
               "Title": "20250303172631_InitialCreate.cs",
               "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Migrations\\20250303172631_InitialCreate.cs",
               "RelativeDocumentMoniker": "Migrations\\20250303172631_InitialCreate.cs",
               "ToolTip": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Migrations\\20250303172631_InitialCreate.cs",
               "RelativeToolTip": "Migrations\\20250303172631_InitialCreate.cs",
-              "ViewState": "AgIAAFEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-03T17:26:31.933Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 31,
               "Title": "AddtheSessionLinkContext.cs",
               "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Data\\AddtheSessionLinkContext.cs",
               "RelativeDocumentMoniker": "Data\\AddtheSessionLinkContext.cs",
@@ -480,35 +617,12 @@
               "RelativeToolTip": "Data\\AddtheSessionLinkContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-27T15:27:10.489Z"
+              "WhenOpened": "2025-02-27T15:27:10.489Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "appsettings.Development.json",
-              "ToolTip": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\appsettings.Development.json",
-              "RelativeToolTip": "appsettings.Development.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-02-27T17:32:44.512Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "DoctorDTO.cs",
-              "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\DTO\\DoctorDTO.cs",
-              "RelativeDocumentMoniker": "DTO\\DoctorDTO.cs",
-              "ToolTip": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\DTO\\DoctorDTO.cs",
-              "RelativeToolTip": "DTO\\DoctorDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-27T14:55:16.566Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 33,
               "Title": "RefreashTokenContext.cs",
               "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Data\\RefreashTokenContext.cs",
               "RelativeDocumentMoniker": "Data\\RefreashTokenContext.cs",
@@ -516,11 +630,12 @@
               "RelativeToolTip": "Data\\RefreashTokenContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-09T13:21:19.689Z"
+              "WhenOpened": "2025-02-09T13:21:19.689Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 34,
               "Title": "RatingContext.cs",
               "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Data\\RatingContext.cs",
               "RelativeDocumentMoniker": "Data\\RatingContext.cs",
@@ -528,11 +643,12 @@
               "RelativeToolTip": "Data\\RatingContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T17:13:33.544Z"
+              "WhenOpened": "2025-02-19T17:13:33.544Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 35,
               "Title": "KnowdgleBaseContext.cs",
               "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Data\\KnowdgleBaseContext.cs",
               "RelativeDocumentMoniker": "Data\\KnowdgleBaseContext.cs",
@@ -540,11 +656,12 @@
               "RelativeToolTip": "Data\\KnowdgleBaseContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-27T15:21:04.464Z"
+              "WhenOpened": "2025-02-27T15:21:04.464Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 36,
               "Title": "AppointmentDTO.cs",
               "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\DTO\\AppointmentDTO.cs",
               "RelativeDocumentMoniker": "DTO\\AppointmentDTO.cs",
@@ -552,11 +669,12 @@
               "RelativeToolTip": "DTO\\AppointmentDTO.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAQwA0AAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-27T15:01:04.294Z"
+              "WhenOpened": "2025-02-27T15:01:04.294Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 37,
               "Title": "AddsessionLinkDTO.cs",
               "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\DTO\\AddsessionLinkDTO.cs",
               "RelativeDocumentMoniker": "DTO\\AddsessionLinkDTO.cs",
@@ -564,11 +682,12 @@
               "RelativeToolTip": "DTO\\AddsessionLinkDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-27T15:17:58.815Z"
+              "WhenOpened": "2025-02-27T15:17:58.815Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 38,
               "Title": "KnowdgleBaseDTO.cs",
               "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\DTO\\KnowdgleBaseDTO.cs",
               "RelativeDocumentMoniker": "DTO\\KnowdgleBaseDTO.cs",
@@ -576,29 +695,30 @@
               "RelativeToolTip": "DTO\\KnowdgleBaseDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-27T14:59:09.094Z"
+              "WhenOpened": "2025-02-27T14:59:09.094Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 39,
               "Title": "Consualtance_Manage.csproj",
               "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Consualtance_Manage.csproj",
               "RelativeDocumentMoniker": "Consualtance_Manage.csproj",
               "ToolTip": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Consualtance_Manage.csproj",
               "RelativeToolTip": "Consualtance_Manage.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-02-19T14:46:49.033Z"
+              "WhenOpened": "2025-02-19T14:46:49.033Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 40,
               "Title": "ConsultanceExteraDetails.cs",
               "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Models\\ConsultanceExteraDetails.cs",
               "RelativeDocumentMoniker": "Models\\ConsultanceExteraDetails.cs",
               "ToolTip": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Models\\ConsultanceExteraDetails.cs",
               "RelativeToolTip": "Models\\ConsultanceExteraDetails.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-10T16:25:56.522Z"
             }

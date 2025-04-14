@@ -1,8 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-
-namespace Consualtance_Manage.DTO
+﻿namespace Consualtance_Manage.DTO
 {
-    public class DoctorDTO
+    public class DoctorFullDetails
     {
         public required int Doctorid { get; set; }
         public required string Specialization { get; set; }
@@ -10,6 +8,8 @@ namespace Consualtance_Manage.DTO
         public required int Experience { get; set; }
         public required string IsAvailable { get; set; }
         public required string Languages { get; set; }
-        public required int UserId { get; set; }
+        public required string Email { get; set; }
+        public required string Name { get; set; }
+        public required string Phone { get; set; }
     }
 }

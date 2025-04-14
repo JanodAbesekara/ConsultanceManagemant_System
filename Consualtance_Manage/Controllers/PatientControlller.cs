@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 
 namespace Consualtance_Manage.Controllers
 {
+ 
     [Route("api/[controller]")]
     [ApiController]
     public class PatientController : Controller
@@ -23,8 +24,8 @@ namespace Consualtance_Manage.Controllers
         }
 
 
-       [HttpPost("AddPatient")]  
-       public async Task<ActionResult<PatientDTO>> AddPatient(PatientDTO patientDTO)
+        [HttpPost("AddPatient")]
+        public async Task<ActionResult<PatientDTO>> AddPatient(PatientDTO patientDTO)
         {
             try
             {
@@ -43,18 +44,16 @@ namespace Consualtance_Manage.Controllers
                     Gender = patientDTO.Gender,
                     Reports = patientDTO.Reports,
                     Languages = patientDTO.Languages,
-                    // Set Reports and Languages as comma-separated strings
-                    //Reports = string.Join(",", patientDTO.ReportsArray ?? Array.Empty<string>()),
-                    //Languages = string.Join(",", patientDTO.LanguagesArray ?? Array.Empty<string>())
+
                 };
 
                 // Add to database
                 await _patientContext.Patients.AddAsync(newPatient);
-               await _patientContext.SaveChangesAsync();
+                await _patientContext.SaveChangesAsync();
 
                 return Ok(newPatient);
 
-                //return CreatedAtAction(nameof(AddPatient), new { id = newPatient.PatientId }, newPatient);
+
             }
             catch (Exception ex)
             {
@@ -62,6 +61,137 @@ namespace Consualtance_Manage.Controllers
             }
         }
 
+        [HttpGet("GetPatient/{userId}")]
+        public async Task<ActionResult<PatientDTO>> GetPatientData(int userId)
+        {
+            try
+            {
+                // Find the patient by UserID
+                var patient = await _patientContext.Patients
+                    .FirstOrDefaultAsync(p => p.UserId == userId);
 
+                if (patient == null)
+                {
+                    return NotFound("Patient not found");
+                }
+
+                // Convert Patient model to PatientDTO
+                var patientDTO = new PatientDTO
+                {
+                    PatientId = patient.PatientId,
+                    UserId = patient.UserId,
+                    Gender = patient.Gender,
+                    Reports = patient.Reports,
+                    Languages = patient.Languages,
+                };
+
+                return Ok(patientDTO);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
+        }
+
+        [HttpPut("Updatepatient")]
+        public async Task<ActionResult<PatientDTO>> updatepatient(PatientDTO patientDTO)
+        {
+            try
+            {
+                var patient = await _patientContext.Patients
+                    .FirstOrDefaultAsync(p => p.UserId == patientDTO.UserId);
+
+                if (patient == null)
+                {
+                    return NotFound("Patient not found");
+                }
+
+
+                if (patient.Reports != null)
+                {
+                    patient.Reports = patientDTO.Reports;
+                }
+
+
+                patient.Languages = !string.IsNullOrEmpty(patientDTO.Languages) ? patientDTO.Languages : patient.Languages;
+                patient.Reports = !string.IsNullOrEmpty(patientDTO.Reports) ? patientDTO.Reports : patient.Reports;
+
+                _patientContext.Patients.Update(patient);
+                await _patientContext.SaveChangesAsync();
+
+                var updatepatientDTO = new PatientDTO
+                {
+                    PatientId = patient.PatientId,
+                    Gender = patient.Gender,
+                    Reports = patient.Reports,
+                    Languages = patient.Languages,
+                    UserId = patient.UserId,
+                };
+                return Ok(updatepatientDTO);
+
+
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
+        }
+
+        [HttpDelete("DeletePatient/{PatientId}")]
+        public async Task<ActionResult> DeletePatient(int PatientId)
+        {
+            try
+            {
+                var patient = await _patientContext.FindAsync<Patient>(PatientId);
+
+                if (patient == null)
+                {
+                    return NotFound("Patient not found");
+                }
+
+                _patientContext.Patients.Remove(patient);
+                await _patientContext.SaveChangesAsync();
+
+                return Ok("Patient deleted successfully");
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
+        }
+
+        [HttpGet("GetAllPatients")]
+        public async Task<ActionResult<PatientFulldetailDTO>> getfulldetails()
+        {
+            try
+            {
+                var patients = await _patientContext.Patients
+                    .Include(p => p.User) 
+                    .ToListAsync();
+
+                if (patients == null || !patients.Any())
+                {
+                    return NotFound("No patients found");
+                }
+
+                var patientDetailsDTO = patients.Select(p => new PatientFulldetailDTO
+                {
+                    PatientId = p.PatientId,
+                    UserId = p.UserId,
+                    Name = p.User.Name,
+                    Phone = p.User.Phone,
+                    Email = p.User.Email,
+                    Gender = p.Gender,
+                    Reports = p.Reports,
+                    Languages = p.Languages,
+                }).ToList();
+
+                return Ok(patientDetailsDTO);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
+        }
     }
 }

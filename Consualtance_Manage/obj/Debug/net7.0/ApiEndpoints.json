@@ -1,9 +1,169 @@
 [
   {
+    "ContainingType": "Consualtance_Manage.Controllers.DoctorDetailsController",
+    "Method": "AddDoctorDetails",
+    "RelativePath": "api/DoctorDetails/AddDoctorDetails",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "doctorDTO",
+        "Type": "Consualtance_Manage.DTO.DoctorDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Consualtance_Manage.DTO.DoctorDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Consualtance_Manage.Controllers.DoctorDetailsController",
+    "Method": "allDoctors",
+    "RelativePath": "api/DoctorDetails/GetallDoctors",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Consualtance_Manage.DTO.DoctorFullDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Consualtance_Manage.Controllers.DoctorDetailsController",
+    "Method": "GetDoctorDetail",
+    "RelativePath": "api/DoctorDetails/Getuser/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Consualtance_Manage.DTO.DoctorDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "Consualtance_Manage.Controllers.PatientController",
     "Method": "AddPatient",
     "RelativePath": "api/Patient/AddPatient",
     "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "patientDTO",
+        "Type": "Consualtance_Manage.DTO.PatientDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Consualtance_Manage.DTO.PatientDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Consualtance_Manage.Controllers.PatientController",
+    "Method": "DeletePatient",
+    "RelativePath": "api/Patient/DeletePatient/{PatientId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "PatientId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Consualtance_Manage.Controllers.PatientController",
+    "Method": "getfulldetails",
+    "RelativePath": "api/Patient/GetAllPatients",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Consualtance_Manage.DTO.PatientFulldetailDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Consualtance_Manage.Controllers.PatientController",
+    "Method": "GetPatientData",
+    "RelativePath": "api/Patient/GetPatient/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Consualtance_Manage.DTO.PatientDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Consualtance_Manage.Controllers.PatientController",
+    "Method": "updatepatient",
+    "RelativePath": "api/Patient/Updatepatient",
+    "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -76,6 +236,16 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "Consualtance_Manage.Controllers.UserAuthController",
+    "Method": "sendEmail",
+    "RelativePath": "api/UserAuth/SendEmails",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "Consualtance_Manage.Controllers.WeatherForecastController",

@@ -2,6 +2,7 @@
 using Consualtance_Manage.Data;
 using Consualtance_Manage.DTO;
 using Consualtance_Manage.Models;
+using Consualtance_Manage.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -20,11 +21,13 @@ namespace Consualtance_Manage.Controllers
     {
         private readonly ApplicationContext _userContext;
         private readonly IConfiguration _configuration;
+        private readonly IEmailService emailService;
 
-        public UserAuthController(ApplicationContext userContext,IConfiguration configuration)
+        public UserAuthController(ApplicationContext userContext,IConfiguration configuration, IEmailService emailService)
         {
             _userContext = userContext;
             _configuration = configuration;
+            this.emailService = emailService;
         }
 
         [HttpPost("Register")]
@@ -59,6 +62,19 @@ namespace Consualtance_Manage.Controllers
                 return StatusCode(500, $"Internal server error: {ex.Message}");
             }
         }
+        [HttpPost("SendEmails")]
+
+        public async Task<IActionResult> sendEmail()
+        {
+            MailRequest mailRequest = new MailRequest();
+            mailRequest.ToEmail = "janodabesekara91@gmail.com";
+            mailRequest.Subject = "Test Email";
+            mailRequest.Boddy = "This is a test email sent from the application.";
+
+            await emailService.SendEmailAsync(mailRequest);
+            return Ok("Send Successfully");
+        }
+
         [HttpPost("Login")]
         public async Task<ActionResult<string>> LoginUser(LoginDTO loginDTO)
         {
@@ -90,6 +106,7 @@ namespace Consualtance_Manage.Controllers
         {
             var claims = new List<Claim>
             {
+                new Claim("id", user.Id.ToString()),
                 new Claim(ClaimTypes.Name,user.Name),
                 new Claim(ClaimTypes.Email,user.Email),
                 new Claim(ClaimTypes.Role, user.RoleManager),
