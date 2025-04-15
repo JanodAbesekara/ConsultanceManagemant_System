@@ -22,6 +22,8 @@ namespace Consualtance_Manage.Models
         public string Password { get; set; }
         public string Phone { get; set; }
 
+        public Boolean Isverified { get; set; } = false;
+
         public string ? RoleManager { get; set; }
 
         public string refreashToken { get; set; } = string.Empty;

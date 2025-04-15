@@ -36,7 +36,8 @@ namespace Consualtance_Manage.Migrations
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Phone = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    RoleManager = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Isverified = table.Column<bool>(type: "bit", nullable: false),
+                    RoleManager = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     refreashToken = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     createdToken = table.Column<DateTime>(type: "datetime2", nullable: false),
                     TokenExpires = table.Column<DateTime>(type: "datetime2", nullable: false)

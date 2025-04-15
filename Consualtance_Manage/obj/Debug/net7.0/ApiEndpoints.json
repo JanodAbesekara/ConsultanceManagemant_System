@@ -187,6 +187,22 @@
   },
   {
     "ContainingType": "Consualtance_Manage.Controllers.UserAuthController",
+    "Method": "Forgetpassword",
+    "RelativePath": "api/UserAuth/Forgetpassword",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserEmail",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Consualtance_Manage.Controllers.UserAuthController",
     "Method": "LoginUser",
     "RelativePath": "api/UserAuth/Login",
     "HttpMethod": "POST",
@@ -239,12 +255,49 @@
   },
   {
     "ContainingType": "Consualtance_Manage.Controllers.UserAuthController",
+    "Method": "Resetpassword",
+    "RelativePath": "api/UserAuth/Resetpassword",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "password",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Consualtance_Manage.Controllers.UserAuthController",
     "Method": "sendEmail",
     "RelativePath": "api/UserAuth/SendEmails",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Consualtance_Manage.Controllers.UserAuthController",
+    "Method": "VeriftEmail",
+    "RelativePath": "api/UserAuth/VerifyEmail",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   },
   {

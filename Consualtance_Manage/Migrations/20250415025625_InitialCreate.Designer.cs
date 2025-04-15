@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Consualtance_Manage.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20250310171637_InitialCreate")]
+    [Migration("20250415025625_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -257,6 +257,9 @@ namespace Consualtance_Manage.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<bool>("Isverified")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -270,7 +273,6 @@ namespace Consualtance_Manage.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("RoleManager")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("TokenExpires")
