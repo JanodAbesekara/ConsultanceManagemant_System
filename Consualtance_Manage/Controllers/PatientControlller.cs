@@ -1,26 +1,37 @@
 ﻿using Consualtance_Manage.Data;
 using Consualtance_Manage.DTO;
 using Consualtance_Manage.Models;
+using Consualtance_Manage.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
-using System.Threading.Tasks;
+using Consualtance_Manage.Context;
+using Microsoft.IdentityModel.Tokens;
+using System.Numerics;
+using System.Security.Cryptography;
+using System.Text;
+
 
 namespace Consualtance_Manage.Controllers
 {
  
     [Route("api/[controller]")]
     [ApiController]
+
     public class PatientController : Controller
     {
         private readonly ApplicationContext _patientContext;
+        private readonly IEmailService emailService;
+        
 
-        public PatientController(ApplicationContext patientContext)
+        public PatientController(ApplicationContext patientContext , IEmailService emailService )
         {
             _patientContext = patientContext;
+           this.emailService = emailService;
+
         }
 
 
@@ -142,12 +153,25 @@ namespace Consualtance_Manage.Controllers
         {
             try
             {
-                var patient = await _patientContext.FindAsync<Patient>(PatientId);
+                var patient = await _patientContext.Patients
+                              .Include(p => p.User)
+                              .FirstOrDefaultAsync(p => p.PatientId == PatientId);
+
 
                 if (patient == null)
                 {
                     return NotFound("Patient not found");
                 }
+
+                MailRequest mailRequest = new MailRequest
+                {
+                    ToEmail = patient.User.Email,
+                    Subject = "Account Deletion Confirmation",
+                    Boddy = $"<h1>Dear {patient.User.Name}, your account has been successfully deleted.</h1>"
+                };
+
+               
+                await emailService.SendEmailAsync(mailRequest);
 
                 _patientContext.Patients.Remove(patient);
                 await _patientContext.SaveChangesAsync();

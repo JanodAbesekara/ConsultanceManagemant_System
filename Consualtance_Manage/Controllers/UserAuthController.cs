@@ -190,6 +190,13 @@ namespace Consualtance_Manage.Controllers
                 {
                     return BadRequest("Password Is not correcetd");
                 }
+
+                if (!RegistedUser.Isverified)
+                {
+                    return BadRequest("You must verify your account.");
+                }
+
+
                 string token = createToken(RegistedUser);
 
                 return Ok(new { token });

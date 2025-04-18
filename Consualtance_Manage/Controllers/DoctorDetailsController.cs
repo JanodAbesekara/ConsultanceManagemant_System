@@ -2,8 +2,11 @@
 using Consualtance_Manage.Data;
 using Consualtance_Manage.DTO;
 using Consualtance_Manage.Models;
+using Consualtance_Manage.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+
+
 
 namespace Consualtance_Manage.Controllers
 {
@@ -12,20 +15,23 @@ namespace Consualtance_Manage.Controllers
     public class DoctorDetailsController : Controller
     {
         private readonly ApplicationContext _doctorContext;
+        private readonly IEmailService emailService;
+      
 
-        public DoctorDetailsController(ApplicationContext doctorContext )
+        public DoctorDetailsController(ApplicationContext doctorContext, IEmailService emailService)
         {
             _doctorContext = doctorContext;
+            this.emailService = emailService;
         }
 
         [HttpPost("AddDoctorDetails")]
-        public async  Task<ActionResult<DoctorDTO>> AddDoctorDetails(DoctorDTO doctorDTO)
+        public async Task<ActionResult<DoctorDTO>> AddDoctorDetails(DoctorDTO doctorDTO)
         {
             try
             {
-               
-              var doctoretails = await _doctorContext.Doctors
-                    .FirstOrDefaultAsync(x => x.UserId == doctorDTO.UserId);
+
+                var doctoretails = await _doctorContext.Doctors
+                      .FirstOrDefaultAsync(x => x.UserId == doctorDTO.UserId);
 
                 if (doctoretails != null)
                 {
@@ -99,25 +105,61 @@ namespace Consualtance_Manage.Controllers
                 var doctorFullDetails = doctorDetails.Select(D => new DoctorFullDetails
                 {
                     Doctorid = D.Doctorid,
-                    Specialization =D.Specialization,
-                    Gendermanage =D.Gendermanage,
+                    Specialization = D.Specialization,
+                    Gendermanage = D.Gendermanage,
                     Experience = D.Experience,
                     IsAvailable = D.IsAvailable,
                     Languages = D.Languages,
-                    Email  = D.User.Email,
-                    Name  = D.User.Name,
-                    Phone  =D.User.Phone,
-                 });
+                    Email = D.User.Email,
+                    Name = D.User.Name,
+                    Phone = D.User.Phone,
+                });
 
                 return Ok(doctorFullDetails);
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 return StatusCode(500, $"Internal server error: {ex.Message}");
             }
         }
 
+        [HttpDelete("DeleteDoctor/{doctorId}")]
+        public async Task<IActionResult> RemoveDoctor(int doctorId)
+        {
+            try
+            {
+                
+                var doctorFind = await _doctorContext.Doctors
+                    .Include(d => d.User) 
+                    .FirstOrDefaultAsync(x => x.Doctorid == doctorId);
+
+                if (doctorFind == null)
+                {
+                    return NotFound("Doctor not found");
+                }
+
+              
+                MailRequest mailRequest = new MailRequest
+                {
+                    ToEmail = doctorFind.User.Email,
+                    Subject = "Account Deletion Confirmation",
+                    Boddy = $"<h1>Dear {doctorFind.User.Name},</h1><p>Your doctor account has been successfully deleted.</p>"
+                };
+
+                await emailService.SendEmailAsync(mailRequest);
+
+              
+                _doctorContext.Doctors.Remove(doctorFind);
+                await _doctorContext.SaveChangesAsync();
+
+                return Ok("Doctor removed successfully.");
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
+        }
 
     }
 }

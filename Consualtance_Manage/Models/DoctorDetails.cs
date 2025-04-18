@@ -39,6 +39,7 @@ namespace Consualtance_Manage.Models
 
         [NotMapped]
         public string LanguagesArray { get; set; }
+       
         //{
         //    get => Languages?.Split(',', StringSplitOptions.RemoveEmptyEntries) ?? Array.Empty<string>();
         //    set => Languages = string.Join(",", value.Where(s => !string.IsNullOrWhiteSpace(s)));
