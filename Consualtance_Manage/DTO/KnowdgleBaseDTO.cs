@@ -15,4 +15,6 @@ namespace Consualtance_Manage.DTO
        
         public required int UserId { get; set; }
     }
+
+    
 }

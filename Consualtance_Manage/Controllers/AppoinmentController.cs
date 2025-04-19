@@ -143,6 +143,26 @@ namespace Consualtance_Manage.Controllers
             }
         }
 
+        [HttpDelete("DeleteAppointment/{appointmentId}")]
+        public async Task<IActionResult> deleteAppointment(int appointmentId)
+        {
+            try
+            {
+                var appoinmentdelete = _context.FindAsync<Appointment>(appointmentId);
+                if (appoinmentdelete == null)
+                {
+                    return NotFound("Appointment not found.");
+                }
 
+                _context.Remove(appoinmentdelete);
+                await _context.SaveChangesAsync();
+
+                return Ok("Appointment deleted successfully.");
+            }
+            catch (Exception e)
+            {
+                return StatusCode(500, $"Internal server error: {e.Message}");
+            }
+        }
     }
 }

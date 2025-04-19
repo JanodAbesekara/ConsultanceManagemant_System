@@ -161,5 +161,28 @@ namespace Consualtance_Manage.Controllers
             }
         }
 
+        [HttpPost("chageStates/{Doctorid}")]
+        public async Task<IActionResult> changeStatesD(int Doctorid, string states)
+        {
+            try
+            {
+                var doctorDetails = await _doctorContext.FindAsync<DoctorDetails>(Doctorid);
+
+                if (doctorDetails == null)
+                {
+                    return NotFound("Doctor not found.");
+                }
+
+                doctorDetails.IsAvailable = states;
+
+                await _doctorContext.SaveChangesAsync();
+                return Ok("Doctor state changed successfully.");
+
+            }
+            catch (Exception e)
+            {
+                return StatusCode(500, $"Internal server error: {e.Message}");
+            }
+        }
     }
 }

@@ -48,6 +48,22 @@
   },
   {
     "ContainingType": "Consualtance_Manage.Controllers.AppointmentController",
+    "Method": "deleteAppointment",
+    "RelativePath": "api/Appointment/DeleteAppointment/{appointmentId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "appointmentId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Consualtance_Manage.Controllers.AppointmentController",
     "Method": "GetAllAppointments",
     "RelativePath": "api/Appointment/GetAllAppointments",
     "HttpMethod": "GET",
@@ -91,6 +107,27 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "Consualtance_Manage.Controllers.DoctorDetailsController",
+    "Method": "changeStatesD",
+    "RelativePath": "api/DoctorDetails/chageStates/{Doctorid}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Doctorid",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "states",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "Consualtance_Manage.Controllers.DoctorDetailsController",
@@ -145,6 +182,68 @@
     "ReturnTypes": [
       {
         "Type": "Consualtance_Manage.DTO.DoctorDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Consualtance_Manage.Controllers.KnowdglebaseController",
+    "Method": "addContent",
+    "RelativePath": "api/Knowdglebase/addContent",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "knowdgleBaseDTO",
+        "Type": "Consualtance_Manage.DTO.KnowdgleBaseDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Consualtance_Manage.DTO.KnowdgleBaseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Consualtance_Manage.Controllers.KnowdglebaseController",
+    "Method": "DeletByAdmin",
+    "RelativePath": "api/Knowdglebase/Delete/{CopntentId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "CopntentId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Consualtance_Manage.Controllers.KnowdglebaseController",
+    "Method": "GetAllContent",
+    "RelativePath": "api/Knowdglebase/getAllcontent",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Consualtance_Manage.DTO.KnowdgleBaseDTO, Consualtance_Manage, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -259,6 +358,94 @@
     "ReturnTypes": [
       {
         "Type": "Consualtance_Manage.DTO.PatientDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Consualtance_Manage.Controllers.RatingsControler",
+    "Method": "AddRating",
+    "RelativePath": "api/RatingsControler/AddRating",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ratingDTO",
+        "Type": "Consualtance_Manage.DTO.RatingDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Consualtance_Manage.DTO.RatingDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Consualtance_Manage.Controllers.RatingsControler",
+    "Method": "GetUniqueRatings",
+    "RelativePath": "api/RatingsControler/dectorRating/{DoctorID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "DoctorID",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Consualtance_Manage.DTO.DoctorRatingsResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Consualtance_Manage.Controllers.RatingsControler",
+    "Method": "ratingDelete",
+    "RelativePath": "api/RatingsControler/deleteRatings/{RatingId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "RatingId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Consualtance_Manage.Controllers.RatingsControler",
+    "Method": "getallRatings",
+    "RelativePath": "api/RatingsControler/getAllratings",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Consualtance_Manage.DTO.FullRatings, Consualtance_Manage, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
