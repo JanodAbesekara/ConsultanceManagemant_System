@@ -1,4 +1,5 @@
 ﻿using Consualtance_Manage.Data;
+using Consualtance_Manage.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -9,6 +10,7 @@ namespace Consualtance_Manage.Controllers
     public class UsermanagerController : Controller
     {
         private readonly ApplicationContext _context;
+        private readonly IEmailService _emailService;
 
         public UsermanagerController(ApplicationContext context)
         {
@@ -30,6 +32,18 @@ namespace Consualtance_Manage.Controllers
 
                 _context.Users.Update(createDoctor);
                 await _context.SaveChangesAsync();
+
+                // send email Verify
+                MailRequest mailRequest = new MailRequest
+                {
+                    ToEmail = email,
+                    Subject = "Doctor Account Created",
+                    Boddy = $"<h1>Your account has been created as a Doctor. Please log in to your account.</h1>" +
+                    $"<br><a href=\"http://localhost:3000/DoctorHome?email={email}\">Click Here</a>"
+                };
+
+                await _emailService.SendEmailAsync(mailRequest);
+
                 return Ok("Doctor created successfully");
             }
             catch (Exception ex)
@@ -53,6 +67,16 @@ namespace Consualtance_Manage.Controllers
 
                 _context.Users.Update(createAdmin);
                 await _context.SaveChangesAsync();
+
+                // send email Verify
+                MailRequest mailRequest = new MailRequest
+                {
+                    ToEmail = email,
+                    Subject = "Admin Account Created",
+                    Boddy = $"<h1>Your account has been created as a Admin. Please log in to your account.</h1>" +
+                    $"<br><a href=\"http://localhost:3000/AdminHome?email={email}\">Click Here</a>"
+                };
+
                 return Ok("Admin created successfully");
             }
             catch (Exception ex)

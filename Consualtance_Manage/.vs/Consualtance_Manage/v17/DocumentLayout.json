@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|solutionrelative:controllers\\usermanagercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|d:\\own project\\new folder (2)\\consultancemanage_app\\consultancemanagemant_system\\consualtance_manage\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|d:\\own project\\new folder (2)\\consultancemanage_app\\consultancemanagemant_system\\consualtance_manage\\controllers\\userauthcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|solutionrelative:controllers\\userauthcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|d:\\own project\\new folder (2)\\consultancemanage_app\\consultancemanagemant_system\\consualtance_manage\\data\\applicationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|solutionrelative:data\\applicationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|d:\\own project\\new folder (2)\\consultancemanage_app\\consultancemanagemant_system\\consualtance_manage\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|d:\\own project\\new folder (2)\\consultancemanage_app\\consultancemanagemant_system\\consualtance_manage\\dto\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -174,15 +174,15 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ApplicationContext.cs",
-              "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Data\\ApplicationContext.cs",
-              "RelativeDocumentMoniker": "Data\\ApplicationContext.cs",
-              "ToolTip": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Data\\ApplicationContext.cs",
-              "RelativeToolTip": "Data\\ApplicationContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAARAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "UserAuthController.cs",
+              "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Controllers\\UserAuthController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UserAuthController.cs",
+              "ToolTip": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Controllers\\UserAuthController.cs",
+              "RelativeToolTip": "Controllers\\UserAuthController.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAAwEAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-19T15:51:48.904Z",
+              "WhenOpened": "2025-04-19T16:22:36.551Z",
               "EditorCaption": ""
             },
             {
@@ -193,7 +193,7 @@
               "RelativeDocumentMoniker": "Controllers\\UsermanagerController.cs",
               "ToolTip": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Controllers\\UsermanagerController.cs",
               "RelativeToolTip": "Controllers\\UsermanagerController.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAAwCAAAAA5AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-19T15:50:04.855Z",
               "EditorCaption": ""
@@ -208,8 +208,7 @@
               "RelativeToolTip": "Controllers\\KnowdglebaseController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAHQAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-19T08:07:54.948Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-19T08:07:54.948Z"
             },
             {
               "$type": "Document",
@@ -245,12 +244,11 @@
               "RelativeToolTip": "DTO\\UserDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-14T13:38:51.816Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-14T13:38:51.816Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "User.cs",
               "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Models\\User.cs",
               "RelativeDocumentMoniker": "Models\\User.cs",
@@ -258,8 +256,7 @@
               "RelativeToolTip": "Models\\User.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T02:49:24.023Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-15T02:49:24.023Z"
             },
             {
               "$type": "Document",
@@ -307,8 +304,7 @@
               "RelativeToolTip": "Models\\Appointment.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABUAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-10T17:13:32.684Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-10T17:13:32.684Z"
             },
             {
               "$type": "Document",
