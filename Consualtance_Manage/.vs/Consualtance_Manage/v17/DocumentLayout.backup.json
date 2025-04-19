@@ -11,20 +11,16 @@
       "RelativeMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|solutionrelative:dto\\knowdglebasedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|d:\\own project\\new folder (2)\\consultancemanage_app\\consultancemanagemant_system\\consualtance_manage\\controllers\\appoinmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|solutionrelative:controllers\\appoinmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|d:\\own project\\new folder (2)\\consultancemanage_app\\consultancemanagemant_system\\consualtance_manage\\models\\knowdglebase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|solutionrelative:models\\knowdglebase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|d:\\own project\\new folder (2)\\consultancemanage_app\\consultancemanagemant_system\\consualtance_manage\\controllers\\ratingscontroler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|solutionrelative:controllers\\ratingscontroler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|d:\\own project\\new folder (2)\\consultancemanage_app\\consultancemanagemant_system\\consualtance_manage\\data\\ratingcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|solutionrelative:data\\ratingcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|d:\\own project\\new folder (2)\\consultancemanage_app\\consultancemanagemant_system\\consualtance_manage\\controllers\\appoinmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|solutionrelative:controllers\\appoinmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|d:\\own project\\new folder (2)\\consultancemanage_app\\consultancemanagemant_system\\consualtance_manage\\models\\ratings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -174,9 +170,9 @@
               "Title": "KnowdglebaseController.cs",
               "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Controllers\\KnowdglebaseController.cs",
               "RelativeDocumentMoniker": "Controllers\\KnowdglebaseController.cs",
-              "ToolTip": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Controllers\\KnowdglebaseController.cs*",
-              "RelativeToolTip": "Controllers\\KnowdglebaseController.cs*",
-              "ViewState": "AgIAAFIAAAAAAAAAAAAAAFUAAAA5AAAAAAAAAA==",
+              "ToolTip": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Controllers\\KnowdglebaseController.cs",
+              "RelativeToolTip": "Controllers\\KnowdglebaseController.cs",
+              "ViewState": "AgIAAGEAAAAAAAAAAAAAAJYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-19T08:07:54.948Z",
               "EditorCaption": ""
@@ -187,8 +183,8 @@
               "Title": "KnowdgleBaseDTO.cs",
               "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\DTO\\KnowdgleBaseDTO.cs",
               "RelativeDocumentMoniker": "DTO\\KnowdgleBaseDTO.cs",
-              "ToolTip": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\DTO\\KnowdgleBaseDTO.cs*",
-              "RelativeToolTip": "DTO\\KnowdgleBaseDTO.cs*",
+              "ToolTip": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\DTO\\KnowdgleBaseDTO.cs",
+              "RelativeToolTip": "DTO\\KnowdgleBaseDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-27T14:59:09.094Z",
@@ -197,19 +193,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "RatingContext.cs",
-              "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Data\\RatingContext.cs",
-              "RelativeDocumentMoniker": "Data\\RatingContext.cs",
-              "ToolTip": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Data\\RatingContext.cs",
-              "RelativeToolTip": "Data\\RatingContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T17:13:33.544Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "RatingsControler.cs",
               "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Controllers\\RatingsControler.cs",
               "RelativeDocumentMoniker": "Controllers\\RatingsControler.cs",
@@ -222,12 +205,12 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "KnowdgleBase.cs",
               "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Models\\KnowdgleBase.cs",
               "RelativeDocumentMoniker": "Models\\KnowdgleBase.cs",
-              "ToolTip": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Models\\KnowdgleBase.cs*",
-              "RelativeToolTip": "Models\\KnowdgleBase.cs*",
+              "ToolTip": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Models\\KnowdgleBase.cs",
+              "RelativeToolTip": "Models\\KnowdgleBase.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-27T17:11:16.785Z",
@@ -235,20 +218,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "AppoinmentController.cs",
               "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Controllers\\AppoinmentController.cs",
               "RelativeDocumentMoniker": "Controllers\\AppoinmentController.cs",
               "ToolTip": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Controllers\\AppoinmentController.cs",
               "RelativeToolTip": "Controllers\\AppoinmentController.cs",
-              "ViewState": "AgIAAJMAAAAAAAAAAAAAwCMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAuwG4AAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-18T14:07:43.144Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "PatientDTO.cs",
               "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\DTO\\PatientDTO.cs",
               "RelativeDocumentMoniker": "DTO\\PatientDTO.cs",
@@ -261,7 +244,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "RatingDTO.cs",
               "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\DTO\\RatingDTO.cs",
               "RelativeDocumentMoniker": "DTO\\RatingDTO.cs",
@@ -274,7 +257,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
               "Title": "UserDTO.cs",
               "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\DTO\\UserDTO.cs",
               "RelativeDocumentMoniker": "DTO\\UserDTO.cs",
@@ -287,7 +270,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "Ratings.cs",
               "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Models\\Ratings.cs",
               "RelativeDocumentMoniker": "Models\\Ratings.cs",
@@ -300,7 +283,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
               "Title": "DoctorDetailsController.cs",
               "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Controllers\\DoctorDetailsController.cs",
               "RelativeDocumentMoniker": "Controllers\\DoctorDetailsController.cs",
@@ -313,7 +296,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 11,
               "Title": "DoctorDetails.cs",
               "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Models\\DoctorDetails.cs",
               "RelativeDocumentMoniker": "Models\\DoctorDetails.cs",
@@ -326,7 +309,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 13,
               "Title": "AppointmentDTO.cs",
               "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\DTO\\AppointmentDTO.cs",
               "RelativeDocumentMoniker": "DTO\\AppointmentDTO.cs",
@@ -338,7 +321,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 10,
               "Title": "Appointment.cs",
               "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Models\\Appointment.cs",
               "RelativeDocumentMoniker": "Models\\Appointment.cs",
@@ -351,7 +334,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 12,
               "Title": "DoctorDTO.cs",
               "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\DTO\\DoctorDTO.cs",
               "RelativeDocumentMoniker": "DTO\\DoctorDTO.cs",
@@ -363,7 +346,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 14,
               "Title": "DoctorFullDetails.cs",
               "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\DTO\\DoctorFullDetails.cs",
               "RelativeDocumentMoniker": "DTO\\DoctorFullDetails.cs",
@@ -375,7 +358,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 15,
               "Title": "User.cs",
               "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Models\\User.cs",
               "RelativeDocumentMoniker": "Models\\User.cs",
@@ -387,7 +370,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 16,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -399,7 +382,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 17,
               "Title": "PatientControlller.cs",
               "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Controllers\\PatientControlller.cs",
               "RelativeDocumentMoniker": "Controllers\\PatientControlller.cs",
@@ -411,7 +394,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 20,
               "Title": "EmailSettings.cs",
               "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Services\\EmailSettings.cs",
               "RelativeDocumentMoniker": "Services\\EmailSettings.cs",
@@ -423,7 +406,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 18,
               "Title": "Patient.cs",
               "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Models\\Patient.cs",
               "RelativeDocumentMoniker": "Models\\Patient.cs",
@@ -435,7 +418,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 19,
               "Title": "MailRequest.cs",
               "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Services\\MailRequest.cs",
               "RelativeDocumentMoniker": "Services\\MailRequest.cs",
@@ -447,7 +430,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 21,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\appsettings.Development.json",
               "RelativeDocumentMoniker": "appsettings.Development.json",
@@ -459,7 +442,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 22,
               "Title": "PatientFulldetailDTO.cs",
               "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\DTO\\PatientFulldetailDTO.cs",
               "RelativeDocumentMoniker": "DTO\\PatientFulldetailDTO.cs",
@@ -471,7 +454,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 24,
               "Title": "AppointmentContext.cs",
               "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Data\\AppointmentContext.cs",
               "RelativeDocumentMoniker": "Data\\AppointmentContext.cs",
@@ -483,7 +466,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 23,
               "Title": "AcceptedResult.cs",
               "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Controllers\\AcceptedResult.cs",
               "RelativeDocumentMoniker": "Controllers\\AcceptedResult.cs",
@@ -495,7 +478,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 25,
               "Title": "DoctorPermisionsDTO.cs",
               "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\DTO\\DoctorPermisionsDTO.cs",
               "RelativeDocumentMoniker": "DTO\\DoctorPermisionsDTO.cs",
@@ -507,7 +490,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 26,
               "Title": "AdminPermisionsDTO.cs",
               "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\DTO\\AdminPermisionsDTO.cs",
               "RelativeDocumentMoniker": "DTO\\AdminPermisionsDTO.cs",
@@ -519,7 +502,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 27,
               "Title": "CheckRolebasedPermisions.cs",
               "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\DTO\\CheckRolebasedPermisions.cs",
               "RelativeDocumentMoniker": "DTO\\CheckRolebasedPermisions.cs",
@@ -531,7 +514,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 28,
               "Title": "PatientPermisionsDTO.cs",
               "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\DTO\\PatientPermisionsDTO.cs",
               "RelativeDocumentMoniker": "DTO\\PatientPermisionsDTO.cs",
@@ -543,7 +526,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 29,
               "Title": "AddtheSessionLink.cs",
               "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Models\\AddtheSessionLink.cs",
               "RelativeDocumentMoniker": "Models\\AddtheSessionLink.cs",
@@ -555,7 +538,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 30,
               "Title": "PatientContext.cs",
               "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Data\\PatientContext.cs",
               "RelativeDocumentMoniker": "Data\\PatientContext.cs",
@@ -567,7 +550,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 31,
               "Title": "UserContext.cs",
               "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Data\\UserContext.cs",
               "RelativeDocumentMoniker": "Data\\UserContext.cs",
@@ -579,7 +562,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 34,
               "Title": "DoctorContext.cs",
               "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Data\\DoctorContext.cs",
               "RelativeDocumentMoniker": "Data\\DoctorContext.cs",
@@ -591,7 +574,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 32,
               "Title": "20250303172631_InitialCreate.cs",
               "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Migrations\\20250303172631_InitialCreate.cs",
               "RelativeDocumentMoniker": "Migrations\\20250303172631_InitialCreate.cs",
@@ -602,7 +585,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 33,
               "Title": "AddtheSessionLinkContext.cs",
               "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Data\\AddtheSessionLinkContext.cs",
               "RelativeDocumentMoniker": "Data\\AddtheSessionLinkContext.cs",
@@ -614,7 +597,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 35,
               "Title": "AddsessionLinkDTO.cs",
               "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\DTO\\AddsessionLinkDTO.cs",
               "RelativeDocumentMoniker": "DTO\\AddsessionLinkDTO.cs",
@@ -626,7 +609,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 36,
               "Title": "Consualtance_Manage.csproj",
               "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Consualtance_Manage.csproj",
               "RelativeDocumentMoniker": "Consualtance_Manage.csproj",
@@ -638,7 +621,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 37,
               "Title": "ConsultanceExteraDetails.cs",
               "DocumentMoniker": "D:\\own project\\New folder (2)\\ConsultanceManage_APP\\ConsultanceManagemant_System\\Consualtance_Manage\\Models\\ConsultanceExteraDetails.cs",
               "RelativeDocumentMoniker": "Models\\ConsultanceExteraDetails.cs",
