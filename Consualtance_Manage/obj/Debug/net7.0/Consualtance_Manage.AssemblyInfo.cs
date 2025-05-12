@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Consualtance_Manage")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+499a0303e040bce884e2253f004ec578e023196e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+93b036082edda9d5e396bb3955b60aa3b009b45b")]
 [assembly: System.Reflection.AssemblyProductAttribute("Consualtance_Manage")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Consualtance_Manage")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

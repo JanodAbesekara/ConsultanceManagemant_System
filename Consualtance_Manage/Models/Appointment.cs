@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Org.BouncyCastle.Utilities;
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -10,13 +11,13 @@ namespace Consualtance_Manage.Models
         public int AppointmentId { get; set; }
 
         [Required]
-        public DateTime AppointmentDate { get; set; } 
+        public DateTime AppointmentDate { get; set; }
 
         [Required]
-        public TimeSpan StartTime { get; set; }  
+        public string StartTime { get; set; }  
 
         [Required]
-        public TimeSpan EndTime { get; set; }  
+        public string EndTime { get; set; }  
 
         [Required]
         public string Status { get; set; } = "Available";

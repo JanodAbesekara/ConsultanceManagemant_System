@@ -31,17 +31,18 @@ namespace Consualtance_Manage.Models
 
         // Convert  (string) to an array in 
         [NotMapped]
-        public string[] SpecializationArray
-        {
-            get => Specialization?.Split(',', StringSplitOptions.RemoveEmptyEntries) ?? Array.Empty<string>();
-            set => Specialization = string.Join(",", value.Where(s => !string.IsNullOrWhiteSpace(s)));
-        }
+        public string SpecializationArray { get; set; }
+        //{
+        //    get => Specialization?.Split(',', StringSplitOptions.RemoveEmptyEntries) ?? Array.Empty<string>();
+        //    set => Specialization = string.Join(",", value.Where(s => !string.IsNullOrWhiteSpace(s)));
+        //}
 
         [NotMapped]
-        public string[] LanguagesArray
-        {
-            get => Languages?.Split(',', StringSplitOptions.RemoveEmptyEntries) ?? Array.Empty<string>();
-            set => Languages = string.Join(",", value.Where(s => !string.IsNullOrWhiteSpace(s)));
-        }
+        public string LanguagesArray { get; set; }
+       
+        //{
+        //    get => Languages?.Split(',', StringSplitOptions.RemoveEmptyEntries) ?? Array.Empty<string>();
+        //    set => Languages = string.Join(",", value.Where(s => !string.IsNullOrWhiteSpace(s)));
+        //}
     }
 }

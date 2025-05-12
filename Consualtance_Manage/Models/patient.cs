@@ -9,13 +9,13 @@ namespace Consualtance_Manage.Models
         public int PatientId { get; set; }
 
 
-        public string Reports { get; set; }
+        public string Reports { get; set; } 
 
         [Required]
         public string Gender { get; set; }
 
         
-        public string Languages { get; set; }
+        public string Languages { get; set; } 
 
         [ForeignKey("User")]
         public int UserId { get; set; }
@@ -24,20 +24,20 @@ namespace Consualtance_Manage.Models
         public ICollection<Appointment> Appointments { get; set; }
         public ICollection<Ratings> Ratings { get; set; }
 
-        [NotMapped]
-        public string[] ReportsArray
-        {
-            get => Reports?.Split(',', StringSplitOptions.RemoveEmptyEntries) ?? Array.Empty<string>();
-            set => Reports = string.Join(",", value.Where(s => !string.IsNullOrWhiteSpace(s)));
-        }
+        //[NotMapped]
+        //public string[] ReportsArray
+        //{
+        //    get => Reports?.Split(',', StringSplitOptions.RemoveEmptyEntries) ?? Array.Empty<string>();
+        //    set => Reports = value != null ? string.Join(",", value.Where(s => !string.IsNullOrWhiteSpace(s))) : "";
+        //}
 
-        // Convert Languages string to array and vice versa
-        [NotMapped]
-        public string[] LanguagesArray
-        {
-            get => Languages?.Split(',', StringSplitOptions.RemoveEmptyEntries) ?? Array.Empty<string>();
-            set => Languages = string.Join(",", value.Where(s => !string.IsNullOrWhiteSpace(s)));
-        }
+        //// Convert Languages string to array and vice versa
+        //[NotMapped]
+        //public string[] LanguagesArray
+        //{
+        //    get => Languages?.Split(',', StringSplitOptions.RemoveEmptyEntries) ?? Array.Empty<string>();
+        //    set => Languages = value != null ? string.Join(",", value.Where(s => !string.IsNullOrWhiteSpace(s))) : "";
+        //}
 
     }
 }

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Consualtance_Manage.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20250310171637_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20250418174119_Application")]
+    partial class Application
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -70,15 +70,16 @@ namespace Consualtance_Manage.Migrations
                     b.Property<int>("DoctorId")
                         .HasColumnType("int");
 
-                    b.Property<TimeSpan>("EndTime")
-                        .HasColumnType("time");
+                    b.Property<string>("EndTime")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("PatientId")
-                        .IsRequired()
                         .HasColumnType("int");
 
-                    b.Property<TimeSpan>("StartTime")
-                        .HasColumnType("time");
+                    b.Property<string>("StartTime")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Status")
                         .IsRequired()
@@ -257,6 +258,9 @@ namespace Consualtance_Manage.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<bool>("Isverified")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -270,7 +274,6 @@ namespace Consualtance_Manage.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("RoleManager")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("TokenExpires")
@@ -318,8 +321,7 @@ namespace Consualtance_Manage.Migrations
                     b.HasOne("Consualtance_Manage.Models.Patient", "patient")
                         .WithMany("Appointments")
                         .HasForeignKey("PatientId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.Navigation("DoctorDetails");
 

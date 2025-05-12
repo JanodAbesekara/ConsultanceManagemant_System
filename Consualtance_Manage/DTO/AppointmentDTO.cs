@@ -6,10 +6,10 @@ namespace Consualtance_Manage.DTO
 {
     public class AppointmentDTO
     {
-        public required int AppointmentId { get; set; }
+        public  int AppointmentId { get; set; }
 
   
-        public required DateTime AppoinmetDate { get; set; }
+        public required DateTime AppointmentDate { get; set; }
     
         public required string StartTime { get; set; }
  

@@ -60,10 +60,11 @@ namespace Consualtance_Manage.Data
                 .OnDelete(DeleteBehavior.Restrict);
 
             // One-to-Many Relationship: Patient ↔ Appointments
-            modelBuilder.Entity<Patient>()
-                .HasMany(p => p.Appointments)
-                .WithOne(a => a.patient)
+            modelBuilder.Entity<Appointment>()
+                .HasOne(a => a.patient)
+                .WithMany(p => p.Appointments)
                 .HasForeignKey(a => a.PatientId)
+                .IsRequired(false)
                 .OnDelete(DeleteBehavior.Restrict);
 
             // One-to-Many Relationship: DoctorDetails ↔ Ratings

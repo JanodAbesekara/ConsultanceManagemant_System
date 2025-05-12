@@ -2,6 +2,7 @@
 using Consualtance_Manage.Data;
 using Consualtance_Manage.DTO;
 using Consualtance_Manage.Models;
+using Consualtance_Manage.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -20,11 +21,13 @@ namespace Consualtance_Manage.Controllers
     {
         private readonly ApplicationContext _userContext;
         private readonly IConfiguration _configuration;
+        private readonly IEmailService emailService;
 
-        public UserAuthController(ApplicationContext userContext,IConfiguration configuration)
+        public UserAuthController(ApplicationContext userContext,IConfiguration configuration, IEmailService emailService)
         {
             _userContext = userContext;
             _configuration = configuration;
+            this.emailService = emailService;
         }
 
         [HttpPost("Register")]
@@ -52,6 +55,14 @@ namespace Consualtance_Manage.Controllers
                 await _userContext.Users.AddAsync(newUser);
                 await _userContext.SaveChangesAsync();
 
+                // send email Verify
+                MailRequest mailRequest = new MailRequest();
+                mailRequest.ToEmail = userDTO.Email;
+                mailRequest.Subject = "Email Verification";
+                mailRequest.Boddy = $"<h1>Click the link to verify your email</h1><br><a href='http://localhost:3000/verify?email={userDTO.Email}'>Verify Email</a>";
+                await emailService.SendEmailAsync(mailRequest);
+           
+
                 return Ok(newUser);
             }
             catch (Exception ex)
@@ -59,6 +70,109 @@ namespace Consualtance_Manage.Controllers
                 return StatusCode(500, $"Internal server error: {ex.Message}");
             }
         }
+
+        [HttpGet("VerifyEmail")]
+        public async Task<IActionResult> VeriftEmail(string email)
+        {
+            try
+            {
+                var registeduser = await _userContext.Users.FirstOrDefaultAsync(y => y.Email == email);
+
+                if (string.IsNullOrWhiteSpace(email))
+                {
+                    return BadRequest("Email is required.");
+                }
+
+                registeduser.Isverified = true;
+                _userContext.Users.Update(registeduser);
+                await _userContext.SaveChangesAsync();
+
+                return Ok("User verify Successfully");
+
+            }
+            catch(Exception e)
+            {
+                return StatusCode(500, $"Internal server error: {e.Message}");
+            }
+
+        }
+
+        [HttpPost("Forgetpassword")]
+        public async Task<IActionResult> Forgetpassword(string UserEmail)
+        {
+            if (string.IsNullOrWhiteSpace(UserEmail))
+            {
+                return BadRequest("Email is required.");
+            }
+
+            // Await the async method
+            var passwordChange = await _userContext.Users.FirstOrDefaultAsync(E => E.Email == UserEmail);
+
+            if (passwordChange == null)
+            {
+                return NotFound("User with this email does not exist.");
+            }
+
+            // Send password reset email
+            MailRequest mailRequest = new MailRequest
+            {
+                ToEmail = UserEmail,
+                Subject = "Change Your Password",
+                Boddy = $"<h1>Change Your Password</h1><br><a href='http://localhost:3000/Forgetpassword?email={UserEmail}'>Click Here to Reset</a>"
+            };
+
+            await emailService.SendEmailAsync(mailRequest);
+
+            return Ok("Password reset link sent to your email.");
+        }
+
+        [HttpPost("Resetpassword")]
+        public async Task<IActionResult> Resetpassword(string password, string email)
+        {
+            try
+            {
+                if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password))
+                {
+                    return BadRequest("Email and password are required.");
+                }
+
+                var resetUser = await _userContext.Users.FirstOrDefaultAsync(x => x.Email == email);
+
+                if (resetUser == null)
+                {
+                    return NotFound("User not found.");
+                }
+
+                // Hash the new password
+                string bcryptPassword = BCrypt.Net.BCrypt.HashPassword(password);
+
+                // Update and save
+                resetUser.Password = bcryptPassword;
+                _userContext.Users.Update(resetUser);
+                await _userContext.SaveChangesAsync();
+
+                return Ok("Password has been reset successfully.");
+            }
+            catch (Exception e)
+            {
+                return StatusCode(500, $"Internal server error: {e.Message}");
+            }
+        }
+
+
+        [HttpPost("SendEmails")]
+
+        public async Task<IActionResult> sendEmail()
+        {
+            MailRequest mailRequest = new MailRequest();
+            mailRequest.ToEmail = "janodabesekara91@gmail.com";
+            mailRequest.Subject = "Test Email";
+            mailRequest.Boddy = "This is a test email sent from the application.";
+
+            await emailService.SendEmailAsync(mailRequest);
+            return Ok("Send Successfully");
+        }
+
         [HttpPost("Login")]
         public async Task<ActionResult<string>> LoginUser(LoginDTO loginDTO)
         {
@@ -76,9 +190,16 @@ namespace Consualtance_Manage.Controllers
                 {
                     return BadRequest("Password Is not correcetd");
                 }
+
+                if (!RegistedUser.Isverified)
+                {
+                    return BadRequest("You must verify your account.");
+                }
+
+
                 string token = createToken(RegistedUser);
 
-                return Ok(token);
+                return Ok(new { token });
             }
             catch (Exception e)
             {
@@ -90,6 +211,7 @@ namespace Consualtance_Manage.Controllers
         {
             var claims = new List<Claim>
             {
+                new Claim("id", user.Id.ToString()),
                 new Claim(ClaimTypes.Name,user.Name),
                 new Claim(ClaimTypes.Email,user.Email),
                 new Claim(ClaimTypes.Role, user.RoleManager),

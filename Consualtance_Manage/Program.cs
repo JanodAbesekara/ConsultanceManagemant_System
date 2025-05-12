@@ -1,5 +1,6 @@
 using Consualtance_Manage.Context;
 using Consualtance_Manage.Data;
+using Consualtance_Manage.Services;
 using Microsoft.EntityFrameworkCore;
 
 
@@ -11,6 +12,11 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+
+
+// email configuration
+builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
+builder.Services.AddTransient<IEmailService, EmailService>();
 
 // configer the DB connection 
 builder.Services.AddDbContext<ApplicationContext>(options =>
@@ -29,6 +35,14 @@ if (app.Environment.IsDevelopment())
 
 
 app.UseHttpsRedirection();
+
+app.UseCors(builder =>
+{
+    builder
+           .WithOrigins("http://localhost:3000") 
+           .AllowAnyHeader()
+           .AllowAnyMethod();
+});
 
 app.UseAuthorization();
 
