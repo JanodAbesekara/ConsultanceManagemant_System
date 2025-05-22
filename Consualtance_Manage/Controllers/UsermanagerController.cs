@@ -1,10 +1,12 @@
 ﻿using Consualtance_Manage.Data;
 using Consualtance_Manage.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace Consualtance_Manage.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class UsermanagerController : Controller
@@ -17,6 +19,7 @@ namespace Consualtance_Manage.Controllers
             _context = context;
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost("createDoctor")]
         public async Task<ActionResult> createDoctor(string email)
         {
@@ -52,6 +55,7 @@ namespace Consualtance_Manage.Controllers
             }
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost("CreateAdmin")]
         public async Task<ActionResult> CreateAdmin(string email)
         {

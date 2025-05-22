@@ -17,7 +17,7 @@ using System.Text;
 
 namespace Consualtance_Manage.Controllers
 {
- 
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
 
@@ -34,7 +34,7 @@ namespace Consualtance_Manage.Controllers
 
         }
 
-
+        [Authorize(Roles = "Patient")]
         [HttpPost("AddPatient")]
         public async Task<ActionResult<PatientDTO>> AddPatient(PatientDTO patientDTO)
         {
@@ -72,6 +72,7 @@ namespace Consualtance_Manage.Controllers
             }
         }
 
+        [Authorize(Roles = "Patient")]
         [HttpGet("GetPatient/{userId}")]
         public async Task<ActionResult<PatientDTO>> GetPatientData(int userId)
         {
@@ -104,6 +105,7 @@ namespace Consualtance_Manage.Controllers
             }
         }
 
+        [Authorize(Roles = "Patient")]
         [HttpPut("Updatepatient")]
         public async Task<ActionResult<PatientDTO>> updatepatient(PatientDTO patientDTO)
         {
@@ -148,6 +150,7 @@ namespace Consualtance_Manage.Controllers
             }
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpDelete("DeletePatient/{PatientId}")]
         public async Task<ActionResult> DeletePatient(int PatientId)
         {
@@ -183,7 +186,7 @@ namespace Consualtance_Manage.Controllers
                 return StatusCode(500, $"Internal server error: {ex.Message}");
             }
         }
-
+        [Authorize(Roles = "Admin")]
         [HttpGet("GetAllPatients")]
         public async Task<ActionResult<PatientFulldetailDTO>> getfulldetails()
         {

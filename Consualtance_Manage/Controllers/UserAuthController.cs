@@ -15,6 +15,7 @@ using System.Text;
 
 namespace Consualtance_Manage.Controllers
 {
+  
     [Route("api/[controller]")]
     [ApiController]
     public class UserAuthController : Controller
@@ -197,7 +198,7 @@ namespace Consualtance_Manage.Controllers
                 }
 
 
-                string token = createToken(RegistedUser);
+                string token = CreateToken(RegistedUser);
 
                 return Ok(new { token });
             }
@@ -207,33 +208,26 @@ namespace Consualtance_Manage.Controllers
             }
         }
 
-        private string createToken(User user)
+        private string CreateToken(User user)
         {
             var claims = new List<Claim>
-            {
-                new Claim("id", user.Id.ToString()),
-                new Claim(ClaimTypes.Name,user.Name),
-                new Claim(ClaimTypes.Email,user.Email),
-                new Claim(ClaimTypes.Role, user.RoleManager),
-            };
+    {
+        new Claim("id", user.Id.ToString()),
+        new Claim(ClaimTypes.Name, user.Name),
+        new Claim(ClaimTypes.Email, user.Email),
+        new Claim(ClaimTypes.Role, user.RoleManager)
+    };
 
             var permissions = CheckRoleBasedPermissions.GetPermissionsByRole(user.RoleManager);
+            claims.AddRange(permissions.Select(p => new Claim("Permission", p)));
 
-            foreach (var permission in permissions)
-            {
-                claims.Add(new Claim("Permission", permission));
-            }
-
-            string? keyString = _configuration["JwtSettings:Key"];
-            if (string.IsNullOrEmpty(keyString) || keyString.Length < 64)
-            {
-                throw new Exception("JWT Key is too short. Must be at least 64 characters long.");
-            }
+            var keyString = _configuration["JwtSettings:Key"];
+            if (string.IsNullOrWhiteSpace(keyString) || keyString.Length < 64)
+                throw new Exception("JWT Key must be at least 64 characters.");
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(keyString));
-            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha512Signature);
+            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha512);
 
-            // Create JWT token
             var token = new JwtSecurityToken(
                 issuer: _configuration["JwtSettings:Issuer"],
                 audience: _configuration["JwtSettings:Audience"],

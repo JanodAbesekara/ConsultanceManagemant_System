@@ -1,150 +1,99 @@
 ﻿using Consualtance_Manage.Data;
 using Consualtance_Manage.DTO;
 using Consualtance_Manage.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace Consualtance_Manage.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
-    public class KnowdglebaseController : Controller
+    public class KnowdglebaseController : ControllerBase
     {
-        private  readonly ApplicationContext _knowdgleContext;
+        private readonly ApplicationContext _context;
 
-        public KnowdglebaseController(ApplicationContext knowdgleContext)
+        public KnowdglebaseController(ApplicationContext context)
         {
-            _knowdgleContext = knowdgleContext;
+            _context = context;
         }
 
+        [Authorize(Roles = "Doctor")]
         [HttpPost("addContent")]
-        public async Task<ActionResult<KnowdgleBaseDTO>> addContent(KnowdgleBaseDTO knowdgleBaseDTO)
+        public async Task<ActionResult<KnowdgleBaseDTO>> AddContent(KnowdgleBaseDTO dto)
         {
-            try
+            if (await _context.KnowdgleBase.AnyAsync(x => x.ContentTopic == dto.ContentTopic))
+                return BadRequest("Content already exists");
+
+            var content = new KnowdgleBase
             {
-                var contentcheck = await _knowdgleContext.KnowdgleBase
-                    .FirstOrDefaultAsync(x => x.ContentTopic == knowdgleBaseDTO.ContentTopic);
+                ContentTopic = dto.ContentTopic,
+                ContentDescription = dto.ContentDescription,
+                ContentLink = dto.ContentLink,
+                UserId = dto.UserId
+            };
 
-                if (contentcheck != null)
-                {
-                    return BadRequest("Content already added");
-                }
-
-                var addedcontent = new KnowdgleBase
-                {
-                    ContentTopic = knowdgleBaseDTO.ContentTopic,
-                    ContentDescription = knowdgleBaseDTO.ContentDescription,
-                    ContentLink = knowdgleBaseDTO.ContentLink,
-                    UserId = knowdgleBaseDTO.UserId
-                };
-
-                await _knowdgleContext.AddAsync(addedcontent);
-                await _knowdgleContext.SaveChangesAsync();
-
-                return Ok(addedcontent);
-            }
-            catch (Exception e)
-            {
-                return StatusCode(500, $"Internal server error: {e.Message}");
-            }
+            await _context.KnowdgleBase.AddAsync(content);
+            await _context.SaveChangesAsync();
+            return Ok(content);
         }
 
-        [HttpGet("getAllcontent")]
+        [HttpGet("getAllContent")]
         public async Task<ActionResult<List<KnowdgleBaseDTO>>> GetAllContent()
         {
-            try
-            {
-                var allDetails = await _knowdgleContext.KnowdgleBase
-                    .Select(k => new KnowdgleBaseDTO
-                    {
-                        CopntentId = k.CopntentId,
-                        ContentTopic = k.ContentTopic,
-                        ContentDescription = k.ContentDescription,
-                        ContentLink = k.ContentLink,
-                        UserId = k.UserId
-                    })
-                    .ToListAsync();
-
-                return Ok(allDetails);
-            }
-            catch (Exception e)
-            {
-                return StatusCode(500, $"Internal server error: {e.Message}");
-            }
-        }
-
-        [HttpDelete("Delete/{CopntentId}")]
-        public async Task<ActionResult> DeletByAdmin(int CopntentId)
-        {
-            try
-            {
-                var deltecontent = await _knowdgleContext.KnowdgleBase
-                    .FirstOrDefaultAsync(x => x.CopntentId == CopntentId);
-
-                if (deltecontent == null)
+            var list = await _context.KnowdgleBase
+                .Select(k => new KnowdgleBaseDTO
                 {
-                    return NotFound("Content not found");
-                }
+                    CopntentId = k.CopntentId,
+                    ContentTopic = k.ContentTopic,
+                    ContentDescription = k.ContentDescription,
+                    ContentLink = k.ContentLink,
+                    UserId = k.UserId
+                }).ToListAsync();
 
-                _knowdgleContext.KnowdgleBase.Remove(deltecontent);
-                await _knowdgleContext.SaveChangesAsync();
-
-                return Ok("Content deleted successfully");
-            }
-            catch (Exception e)
-            {
-                return StatusCode(500, $"Internal Server Error: {e.Message}");
-            }
+            return Ok(list);
         }
 
-        [HttpDelete("DeletebyDoctor")]
-        public async Task<ActionResult> DeleteByDoctor(int CopntentId, int UserId)
+        [HttpDelete("delete/{id}")]
+        public async Task<ActionResult> DeleteByAdmin(int id)
         {
-            try
-            {
-                var findTheContent = await _knowdgleContext.KnowdgleBase
-                    .FirstOrDefaultAsync(x => x.CopntentId == CopntentId && x.UserId == UserId);
+            var item = await _context.KnowdgleBase.FindAsync(id);
+            if (item == null) return NotFound("Content not found");
 
-                if (findTheContent == null)
+            _context.KnowdgleBase.Remove(item);
+            await _context.SaveChangesAsync();
+            return Ok("Deleted");
+        }
+
+        [HttpDelete("deleteByDoctor")]
+        public async Task<ActionResult> DeleteByDoctor(int id, int userId)
+        {
+            var item = await _context.KnowdgleBase
+                .FirstOrDefaultAsync(x => x.CopntentId == id && x.UserId == userId);
+
+            if (item == null) return NotFound("Content not found or unauthorized");
+
+            _context.KnowdgleBase.Remove(item);
+            await _context.SaveChangesAsync();
+            return Ok("Deleted by doctor");
+        }
+
+        [HttpGet("getDoctorContent/{userId}")]
+        public async Task<ActionResult<List<KnowdgleBaseDTO>>> GetDoctorContent(int userId)
+        {
+            var list = await _context.KnowdgleBase
+                .Where(x => x.UserId == userId)
+                .Select(k => new KnowdgleBaseDTO
                 {
-                    return NotFound("Content not found or you are not authorized to delete it.");
-                }
+                    CopntentId = k.CopntentId,
+                    ContentTopic = k.ContentTopic,
+                    ContentDescription = k.ContentDescription,
+                    ContentLink = k.ContentLink,
+                    UserId = k.UserId
+                }).ToListAsync();
 
-                _knowdgleContext.KnowdgleBase.Remove(findTheContent);
-                await _knowdgleContext.SaveChangesAsync();
-
-                return Ok("Content deleted successfully.");
-            }
-            catch (Exception e)
-            {
-                return StatusCode(500, $"Internal Error: {e.Message}");
-            }
+            return Ok(list);
         }
-
-        [HttpGet("GetDoctorContent/{UserId}")]
-        public async Task<ActionResult<List<KnowdgleBaseDTO>>> GetDoctorContent(int UserId)
-        {
-            try
-            {
-                var doctorContent = await _knowdgleContext.KnowdgleBase
-                    .Where(x => x.UserId == UserId)
-                    .Select(k => new KnowdgleBaseDTO
-                    {
-                        CopntentId = k.CopntentId,           
-                        ContentTopic = k.ContentTopic,
-                        ContentDescription = k.ContentDescription,
-                        ContentLink = k.ContentLink,
-                        UserId = k.UserId
-                    })
-                    .ToListAsync();
-
-                return Ok(doctorContent);
-            }
-            catch (Exception e)
-            {
-                return StatusCode(500, $"Internal Server Error: {e.Message}");
-            }
-        }
-
     }
 }

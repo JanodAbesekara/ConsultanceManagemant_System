@@ -3,6 +3,7 @@ using Consualtance_Manage.Data;
 using Consualtance_Manage.DTO;
 using Consualtance_Manage.Models;
 using Consualtance_Manage.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -10,6 +11,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Consualtance_Manage.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class DoctorDetailsController : Controller
@@ -24,6 +26,7 @@ namespace Consualtance_Manage.Controllers
             this.emailService = emailService;
         }
 
+        [Authorize(Roles = "Doctor")]
         [HttpPost("AddDoctorDetails")]
         public async Task<ActionResult<DoctorDTO>> AddDoctorDetails(DoctorDTO doctorDTO)
         {
@@ -60,6 +63,7 @@ namespace Consualtance_Manage.Controllers
             }
         }
 
+        [Authorize(Roles = "Doctor")]
         [HttpGet("Getuser/{userId}")]
         public async Task<ActionResult<DoctorDTO>> GetDoctorDetail(int userId)
         {
@@ -93,6 +97,7 @@ namespace Consualtance_Manage.Controllers
             }
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpGet("GetallDoctors")]
         public async Task<ActionResult<DoctorFullDetails>> allDoctors()
         {
@@ -124,6 +129,7 @@ namespace Consualtance_Manage.Controllers
             }
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpDelete("DeleteDoctor/{doctorId}")]
         public async Task<IActionResult> RemoveDoctor(int doctorId)
         {
@@ -160,7 +166,7 @@ namespace Consualtance_Manage.Controllers
                 return StatusCode(500, $"Internal server error: {ex.Message}");
             }
         }
-
+        [Authorize(Roles = "Doctor")]
         [HttpPost("chageStates/{Doctorid}")]
         public async Task<IActionResult> changeStatesD(int Doctorid, string states)
         {
