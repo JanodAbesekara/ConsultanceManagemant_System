@@ -67,6 +67,8 @@ namespace Consualtance_Manage.Controllers
             }
         }
 
+        //Add patientid like null
+
 
         [HttpPost("Bookappointment")]
         public async Task<IActionResult> Bookappointment(int AppointmentId, int Patientid)

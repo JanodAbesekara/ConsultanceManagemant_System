@@ -1,11 +1,13 @@
 ﻿using Consualtance_Manage.Data;
 using Consualtance_Manage.DTO;
 using Consualtance_Manage.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace Consualtance_Manage.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class RatingsControler : Controller
@@ -17,6 +19,7 @@ namespace Consualtance_Manage.Controllers
             _context = context;
         }
 
+        [Authorize(Roles = "Patient")]
         [HttpPost("AddRating")]
         public async Task<ActionResult<RatingDTO>> AddRating([FromBody] RatingDTO ratingDTO)
         {
@@ -48,6 +51,7 @@ namespace Consualtance_Manage.Controllers
             }
         }
 
+        [Authorize(Roles ="Admin")]
         [HttpGet("getAllratings")]
         public async Task<ActionResult<List<FullRatings>>> getallRatings()
         {
@@ -81,7 +85,7 @@ namespace Consualtance_Manage.Controllers
                 return StatusCode(500, $"Internal Server Error: {e.Message}");
             }
         }
-
+        [Authorize(Roles ="Doctor")]
         [HttpGet("dectorRating/{DoctorID}")]
         public async Task<ActionResult<DoctorRatingsResponse>> GetUniqueRatings(int DoctorID)
         {
@@ -128,7 +132,7 @@ namespace Consualtance_Manage.Controllers
                 return StatusCode(500, $"Internal Server Error: {e.Message}");
             }
         }
-
+        [Authorize(Roles ="Admin")]
         [HttpDelete("deleteRatings/{RatingId}")]
         public async Task<ActionResult> ratingDelete(int RatingId)
         {
