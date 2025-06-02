@@ -114,7 +114,7 @@ namespace Consualtance_Manage.Controllers
 
         [Authorize(Roles = "Doctor")]
         [HttpPut("updateLink")]
-        public async Task<ActionResult<AddsessionLinkDTO>> UpdateLink(string email, string sessionLink, int sessionLinkId)
+        public async Task<ActionResult<AddsessionLinkDTO>> UpdateLink(string email, string sessionLink, int sessionLinkId ,string Message)
         {
             try
             {
@@ -132,7 +132,7 @@ namespace Consualtance_Manage.Controllers
                     return NotFound("Session link not found.");
                 }
 
-
+                findSession.Message = Message;
                 findSession.sessionLink = sessionLink;
 
 
@@ -157,7 +157,7 @@ namespace Consualtance_Manage.Controllers
             }
         }
 
-        [Authorize(Roles = "Doctor,Admin")]
+        [Authorize(Roles = "Doctor")]
         [HttpDelete("DeleteSessions")]
         public async Task<ActionResult<AddsessionLinkDTO>> deleteAddedLink(int sessionLinkId)
         {

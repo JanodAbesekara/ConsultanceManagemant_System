@@ -48,7 +48,33 @@
   },
   {
     "ContainingType": "Consualtance_Manage.Controllers.AppointmentController",
-    "Method": "deleteAppointment",
+    "Method": "canselappoinrmt",
+    "RelativePath": "api/Appointment/Canselappoinments/{AppointmentId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "AppointmentId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Consualtance_Manage.DTO.AppointmentDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Consualtance_Manage.Controllers.AppointmentController",
+    "Method": "DeleteAppointment",
     "RelativePath": "api/Appointment/DeleteAppointment/{appointmentId}",
     "HttpMethod": "DELETE",
     "IsController": true,
@@ -64,6 +90,26 @@
   },
   {
     "ContainingType": "Consualtance_Manage.Controllers.AppointmentController",
+    "Method": "getappoinmetns",
+    "RelativePath": "api/Appointment/getallAppoinmet",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Consualtance_Manage.DTO.Getallappoinmetn, Consualtance_Manage, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Consualtance_Manage.Controllers.AppointmentController",
     "Method": "GetAllAppointments",
     "RelativePath": "api/Appointment/GetAllAppointments",
     "HttpMethod": "GET",
@@ -73,6 +119,58 @@
     "ReturnTypes": [
       {
         "Type": "System.Collections.Generic.List\u00601[[Consualtance_Manage.DTO.FullAppoinment, Consualtance_Manage, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Consualtance_Manage.Controllers.AppointmentController",
+    "Method": "getapponimetPatientside",
+    "RelativePath": "api/Appointment/getBookedappoinments/{PatientId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "PatientId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Consualtance_Manage.DTO.Getallappoinmetn, Consualtance_Manage, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Consualtance_Manage.Controllers.AppointmentController",
+    "Method": "GetAppointmentDetails",
+    "RelativePath": "api/Appointment/GetUniqueSessions/{DoctorId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "DoctorId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Consualtance_Manage.DTO.DoctorSideFulldetail, Consualtance_Manage, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -147,6 +245,32 @@
   },
   {
     "ContainingType": "Consualtance_Manage.Controllers.DoctorDetailsController",
+    "Method": "updatedetails",
+    "RelativePath": "api/DoctorDetails/Editdetails",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "doctorDTO",
+        "Type": "Consualtance_Manage.DTO.DoctorDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Consualtance_Manage.DTO.DoctorDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Consualtance_Manage.Controllers.DoctorDetailsController",
     "Method": "allDoctors",
     "RelativePath": "api/DoctorDetails/GetallDoctors",
     "HttpMethod": "GET",
@@ -181,7 +305,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Consualtance_Manage.DTO.DoctorDTO",
+        "Type": "Consualtance_Manage.DTO.DoctorFullDetails",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -378,7 +502,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Consualtance_Manage.DTO.PatientDTO",
+        "Type": "Consualtance_Manage.DTO.PatientFulldetailDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -647,6 +771,11 @@
       {
         "Name": "sessionLinkId",
         "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Message",
+        "Type": "System.String",
         "IsRequired": false
       }
     ],

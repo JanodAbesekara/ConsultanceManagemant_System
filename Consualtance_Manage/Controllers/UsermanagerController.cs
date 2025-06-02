@@ -12,11 +12,12 @@ namespace Consualtance_Manage.Controllers
     public class UsermanagerController : Controller
     {
         private readonly ApplicationContext _context;
-        private readonly IEmailService _emailService;
+        private readonly IEmailService emailService;
 
-        public UsermanagerController(ApplicationContext context)
+        public UsermanagerController(ApplicationContext context , IEmailService emailService)
         {
             _context = context;
+            this.emailService = emailService;
         }
 
         [Authorize(Roles = "Admin")]
@@ -31,6 +32,11 @@ namespace Consualtance_Manage.Controllers
                     return NotFound("User not found");
                 }
 
+                if(createDoctor.RoleManager == "Doctor")
+                {
+                    return BadRequest("Doctor account created allready Plz check your Email");
+                }
+
                 createDoctor.RoleManager = "Doctor";
 
                 _context.Users.Update(createDoctor);
@@ -42,10 +48,10 @@ namespace Consualtance_Manage.Controllers
                     ToEmail = email,
                     Subject = "Doctor Account Created",
                     Boddy = $"<h1>Your account has been created as a Doctor. Please log in to your account.</h1>" +
-                    $"<br><a href=\"http://localhost:3000/DoctorHome?email={email}\">Click Here</a>"
+                    $"<br><a href=\"http://localhost:3000/DoctorHome?$phw={email}\">Click Here</a>"
                 };
 
-                await _emailService.SendEmailAsync(mailRequest);
+                await emailService.SendEmailAsync(mailRequest);
 
                 return Ok("Doctor created successfully");
             }
@@ -65,6 +71,12 @@ namespace Consualtance_Manage.Controllers
                 if (createAdmin == null)
                 {
                     return NotFound("User not found");
+
+                }
+
+                if(createAdmin.RoleManager == "Admin")
+                {
+                    return BadRequest("Admin allready created Check your Email");
                 }
 
                 createAdmin.RoleManager = "Admin";
@@ -78,8 +90,10 @@ namespace Consualtance_Manage.Controllers
                     ToEmail = email,
                     Subject = "Admin Account Created",
                     Boddy = $"<h1>Your account has been created as a Admin. Please log in to your account.</h1>" +
-                    $"<br><a href=\"http://localhost:3000/AdminHome?email={email}\">Click Here</a>"
+                    $"<br><a href=\"http://localhost:3000/AdminHome?$phw={email}\">Click Here</a>"
                 };
+
+                await emailService.SendEmailAsync(mailRequest);
 
                 return Ok("Admin created successfully");
             }

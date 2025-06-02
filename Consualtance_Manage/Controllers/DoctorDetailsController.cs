@@ -65,12 +65,13 @@ namespace Consualtance_Manage.Controllers
 
         [Authorize(Roles = "Doctor")]
         [HttpGet("Getuser/{userId}")]
-        public async Task<ActionResult<DoctorDTO>> GetDoctorDetail(int userId)
+        public async Task<ActionResult<DoctorFullDetails>> GetDoctorDetail(int userId)
         {
             try
             {
                 // Await the async database call
                 var doctor = await _doctorContext.Doctors
+                    .Include(doc => doc.User)
                     .FirstOrDefaultAsync(doc => doc.UserId == userId);
 
                 if (doctor == null)
@@ -79,17 +80,20 @@ namespace Consualtance_Manage.Controllers
                 }
 
                 // Map to DTO
-                var doctorDTO = new DoctorDetails
+                var doctordeail = new DoctorFullDetails
                 {
+                    Doctorid = doctor.Doctorid,
                     Specialization = doctor.Specialization,
                     Gendermanage = doctor.Gendermanage,
                     Experience = doctor.Experience,
                     IsAvailable = doctor.IsAvailable,
                     Languages = doctor.Languages,
-                    UserId = doctor.UserId,
+                    Name = doctor.User.Name,
+                    Email = doctor.User.Email,
+                    Phone = doctor.User.Phone,
                 };
 
-                return Ok(doctorDTO);
+                return Ok(doctordeail); 
             }
             catch (Exception ex)
             {
@@ -138,14 +142,25 @@ namespace Consualtance_Manage.Controllers
                 
                 var doctorFind = await _doctorContext.Doctors
                     .Include(d => d.User) 
+                    .Include(d=> d.Ratings)
                     .FirstOrDefaultAsync(x => x.Doctorid == doctorId);
+
+
+              
 
                 if (doctorFind == null)
                 {
                     return NotFound("Doctor not found");
                 }
 
-              
+                var DoctorUserAccount = await _doctorContext.Users
+               .FirstOrDefaultAsync(D => D.Id == doctorFind.UserId);
+
+                if (DoctorUserAccount == null)
+                {
+                    return NotFound("Doctor details notfound");
+                }
+
                 MailRequest mailRequest = new MailRequest
                 {
                     ToEmail = doctorFind.User.Email,
@@ -155,8 +170,15 @@ namespace Consualtance_Manage.Controllers
 
                 await emailService.SendEmailAsync(mailRequest);
 
-              
+                var doctorRatings = await _doctorContext.Ratings
+                    .Where(r => r.DoctorId == doctorId)
+                    .ToListAsync();
+
+             
+                _doctorContext.Users.Remove(DoctorUserAccount);
+                _doctorContext.Ratings.RemoveRange(doctorRatings);
                 _doctorContext.Doctors.Remove(doctorFind);
+
                 await _doctorContext.SaveChangesAsync();
 
                 return Ok("Doctor removed successfully.");
@@ -188,6 +210,36 @@ namespace Consualtance_Manage.Controllers
             catch (Exception e)
             {
                 return StatusCode(500, $"Internal server error: {e.Message}");
+            }
+        }
+
+        [Authorize(Roles = "Doctor")]
+        [HttpPut("Editdetails")]
+        public async Task<ActionResult<DoctorDTO>> updatedetails(DoctorDTO doctorDTO)
+        {
+            try
+            {
+                
+                var findDoctordetails = await _doctorContext.Doctors
+                    .FirstOrDefaultAsync(d => d.Doctorid == doctorDTO.Doctorid);
+
+                if (findDoctordetails == null)
+                {
+                    return BadRequest("Doctor Not found");
+                }
+
+                findDoctordetails.Specialization = doctorDTO.Specialization;
+                findDoctordetails.Languages = doctorDTO.Languages;
+                findDoctordetails.Experience = doctorDTO.Experience;
+
+
+                await _doctorContext.SaveChangesAsync();
+
+                return Ok(doctorDTO);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
             }
         }
     }

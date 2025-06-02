@@ -19,7 +19,7 @@ namespace Consualtance_Manage.Models
         public DoctorDetails DoctorDetails { get; set; }
 
         [ForeignKey("patient")]
-        public int PatientId { get; set; }
+        public int? PatientId { get; set; }
         public Patient patient { get; set; }
     }
 }

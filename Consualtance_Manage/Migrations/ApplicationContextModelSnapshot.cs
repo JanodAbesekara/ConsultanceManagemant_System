@@ -201,7 +201,7 @@ namespace Consualtance_Manage.Migrations
                     b.Property<int>("DoctorId")
                         .HasColumnType("int");
 
-                    b.Property<int>("PatientId")
+                    b.Property<int?>("PatientId")
                         .HasColumnType("int");
 
                     b.Property<int>("Rating")
@@ -218,29 +218,6 @@ namespace Consualtance_Manage.Migrations
                     b.HasIndex("PatientId");
 
                     b.ToTable("Ratings");
-                });
-
-            modelBuilder.Entity("Consualtance_Manage.Models.RefreashToken", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<DateTime>("Created")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("Expired")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Token")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("RefreashTokens");
                 });
 
             modelBuilder.Entity("Consualtance_Manage.Models.User", b =>
@@ -276,13 +253,6 @@ namespace Consualtance_Manage.Migrations
                     b.Property<DateTime>("TokenExpires")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("createdToken")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("refreashToken")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.HasKey("Id");
 
                     b.ToTable("Users");
@@ -293,7 +263,7 @@ namespace Consualtance_Manage.Migrations
                     b.HasOne("Consualtance_Manage.Models.Appointment", "Appointment")
                         .WithOne("AddtheSessionLink")
                         .HasForeignKey("Consualtance_Manage.Models.AddtheSessionLink", "AppointmentId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Consualtance_Manage.Models.User", "user")
@@ -318,7 +288,7 @@ namespace Consualtance_Manage.Migrations
                     b.HasOne("Consualtance_Manage.Models.Patient", "patient")
                         .WithMany("Appointments")
                         .HasForeignKey("PatientId")
-                        .OnDelete(DeleteBehavior.Restrict);
+                        .OnDelete(DeleteBehavior.SetNull);
 
                     b.Navigation("DoctorDetails");
 
@@ -341,7 +311,7 @@ namespace Consualtance_Manage.Migrations
                     b.HasOne("Consualtance_Manage.Models.User", "user")
                         .WithMany("KnowdgleBase")
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("user");
@@ -369,8 +339,7 @@ namespace Consualtance_Manage.Migrations
                     b.HasOne("Consualtance_Manage.Models.Patient", "patient")
                         .WithMany("Ratings")
                         .HasForeignKey("PatientId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.SetNull);
 
                     b.Navigation("DoctorDetails");
 

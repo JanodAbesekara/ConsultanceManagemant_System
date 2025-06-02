@@ -3435,11 +3435,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\StudyBuddy\\Backend\\studyBuddy\\ConsultanceManagemant_System\\Consualtance_Manage\\Consualtance_Manage.csproj",
+      "projectUniqueName": "D:\\Consultance\\ConsultanceManagemant_System\\Consualtance_Manage\\Consualtance_Manage.csproj",
       "projectName": "Consualtance_Manage",
-      "projectPath": "D:\\StudyBuddy\\Backend\\studyBuddy\\ConsultanceManagemant_System\\Consualtance_Manage\\Consualtance_Manage.csproj",
+      "projectPath": "D:\\Consultance\\ConsultanceManagemant_System\\Consualtance_Manage\\Consualtance_Manage.csproj",
       "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "D:\\StudyBuddy\\Backend\\studyBuddy\\ConsultanceManagemant_System\\Consualtance_Manage\\obj\\",
+      "outputPath": "D:\\Consultance\\ConsultanceManagemant_System\\Consualtance_Manage\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -3472,7 +3472,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.200"
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net7.0": {
@@ -3544,7 +3544,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   }

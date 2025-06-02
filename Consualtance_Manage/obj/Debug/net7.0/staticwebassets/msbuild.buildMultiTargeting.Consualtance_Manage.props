@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\Consualtance_Manage.props" />
-</Project>

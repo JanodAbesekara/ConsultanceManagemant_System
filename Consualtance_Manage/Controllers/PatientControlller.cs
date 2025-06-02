@@ -36,7 +36,7 @@ namespace Consualtance_Manage.Controllers
 
         [Authorize(Roles = "Patient")]
         [HttpPost("AddPatient")]
-        public async Task<ActionResult<PatientDTO>> AddPatient(PatientDTO patientDTO)
+        public async Task<ActionResult<PatientDTO>> AddPatient([FromBody] PatientDTO patientDTO)
         {
             try
             {
@@ -74,30 +74,34 @@ namespace Consualtance_Manage.Controllers
 
         [Authorize(Roles = "Patient")]
         [HttpGet("GetPatient/{userId}")]
-        public async Task<ActionResult<PatientDTO>> GetPatientData(int userId)
+        public async Task<ActionResult<PatientFulldetailDTO>> GetPatientData(int userId)
         {
             try
             {
                 // Find the patient by UserID
                 var patient = await _patientContext.Patients
-                    .FirstOrDefaultAsync(p => p.UserId == userId);
+             .Include(p => p.User)
+             .FirstOrDefaultAsync(p => p.UserId == userId);
 
                 if (patient == null)
                 {
-                    return NotFound("Patient not found");
+                    return NotFound("Patient not found.");
                 }
 
-                // Convert Patient model to PatientDTO
-                var patientDTO = new PatientDTO
+                // Build and return the DTO
+                var dto = new PatientFulldetailDTO
                 {
                     PatientId = patient.PatientId,
                     UserId = patient.UserId,
                     Gender = patient.Gender,
                     Reports = patient.Reports,
                     Languages = patient.Languages,
+                    Name = patient.User.Name,
+                    Phone = patient.User.Phone,
+                    Email = patient.User.Email
                 };
 
-                return Ok(patientDTO);
+                return Ok(dto);
             }
             catch (Exception ex)
             {
@@ -160,11 +164,19 @@ namespace Consualtance_Manage.Controllers
                               .Include(p => p.User)
                               .FirstOrDefaultAsync(p => p.PatientId == PatientId);
 
-
-                if (patient == null)
+                if (patient == null || patient.User == null)
                 {
-                    return NotFound("Patient not found");
+                    return NotFound("Patient or associated user not found");
                 }
+
+                var patientUseraccount = await _patientContext.Users
+                    .FirstOrDefaultAsync(u => u.Id == patient.UserId);
+
+                if(patientUseraccount == null)
+                {
+                    return NotFound("User Not Found");
+                }
+
 
                 MailRequest mailRequest = new MailRequest
                 {
@@ -173,9 +185,9 @@ namespace Consualtance_Manage.Controllers
                     Boddy = $"<h1>Dear {patient.User.Name}, your account has been successfully deleted.</h1>"
                 };
 
-               
                 await emailService.SendEmailAsync(mailRequest);
 
+                _patientContext.Users.Remove(patientUseraccount);
                 _patientContext.Patients.Remove(patient);
                 await _patientContext.SaveChangesAsync();
 
@@ -183,9 +195,12 @@ namespace Consualtance_Manage.Controllers
             }
             catch (Exception ex)
             {
-                return StatusCode(500, $"Internal server error: {ex.Message}");
+                return StatusCode(500, $"Internal server error: {ex.InnerException?.Message ?? ex.Message}");
             }
         }
+
+
+
         [Authorize(Roles = "Admin")]
         [HttpGet("GetAllPatients")]
         public async Task<ActionResult<PatientFulldetailDTO>> getfulldetails()

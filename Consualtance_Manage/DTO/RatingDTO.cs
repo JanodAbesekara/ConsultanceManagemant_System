@@ -5,7 +5,7 @@
 
         public required int RatingId { get; set; }
         public required int DoctorId { get; set; }
-        public required int PatientId { get; set; }
+        public  int? PatientId { get; set; }
         public required int Rating { get; set; }
         public required string Review { get; set; }
     }
@@ -14,11 +14,11 @@
     {
         public required int RatingId { get; set; }
         public required int DoctorId { get; set; }
-        public required int PatientId { get; set; }
+        public  int? PatientId { get; set; }
         public required int Rating { get; set; }
         public required string Review { get; set; }
-        public required string patientEmail { get; set; }
-        public required string patientName { get; set; }
+        public  string? patientEmail { get; set; }
+        public  string? patientName { get; set; }
 
         public required string doctorEmail { get; set; }
         public required string doctorName { get; set; }

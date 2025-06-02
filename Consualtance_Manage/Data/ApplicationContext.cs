@@ -16,7 +16,6 @@ namespace Consualtance_Manage.Data
         public DbSet<Ratings> Ratings { get; set; }
         public DbSet<AddtheSessionLink> AddtheSessionLinks { get; set; }
         public DbSet<KnowdgleBase> KnowdgleBase { get; set; }
-        public DbSet<RefreashToken> RefreashTokens { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -50,7 +49,7 @@ namespace Consualtance_Manage.Data
                 .HasMany(u => u.KnowdgleBase)
                 .WithOne(kb => kb.user)
                 .HasForeignKey(kb => kb.UserId)
-               .OnDelete(DeleteBehavior.Restrict);
+               .OnDelete(DeleteBehavior.Cascade);
 
             // One-to-Many Relationship: DoctorDetails ↔ Appointments
             modelBuilder.Entity<DoctorDetails>()
@@ -65,7 +64,7 @@ namespace Consualtance_Manage.Data
                 .WithMany(p => p.Appointments)
                 .HasForeignKey(a => a.PatientId)
                 .IsRequired(false)
-                .OnDelete(DeleteBehavior.Restrict);
+                .OnDelete(DeleteBehavior.SetNull);
 
             // One-to-Many Relationship: DoctorDetails ↔ Ratings
             modelBuilder.Entity<DoctorDetails>()
@@ -74,19 +73,23 @@ namespace Consualtance_Manage.Data
                 .HasForeignKey(r => r.DoctorId)
                 .OnDelete(DeleteBehavior.Restrict);
 
+
             // One-to-Many Relationship: Patient ↔ Ratings
             modelBuilder.Entity<Patient>()
                 .HasMany(p => p.Ratings)
                 .WithOne(r => r.patient)
                 .HasForeignKey(r => r.PatientId)
-                .OnDelete(DeleteBehavior.Restrict);
+                .IsRequired(false)
+                .OnDelete(DeleteBehavior.SetNull);
+
 
             // One-to-One Relationship: Appointment ↔ AddtheSessionLink
             modelBuilder.Entity<Appointment>()
                 .HasOne(a => a.AddtheSessionLink)
                 .WithOne(s => s.Appointment)
                 .HasForeignKey<AddtheSessionLink>(s => s.AppointmentId)
-                .OnDelete(DeleteBehavior.Restrict);
+                .OnDelete(DeleteBehavior.Cascade);
+
 
             base.OnModelCreating(modelBuilder);
         }
