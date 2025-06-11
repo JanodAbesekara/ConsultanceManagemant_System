@@ -7,24 +7,16 @@
       "RelativeMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|solutionrelative:controllers\\knowdglebasecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|d:\\consultance\\consultancemanagemant_system\\consualtance_manage\\controllers\\sessionlinkcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|solutionrelative:controllers\\sessionlinkcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|d:\\consultance\\consultancemanagemant_system\\consualtance_manage\\controllers\\appoinmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|solutionrelative:controllers\\appoinmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|d:\\consultance\\consultancemanagemant_system\\consualtance_manage\\data\\applicationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|solutionrelative:data\\applicationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|d:\\consultance\\consultancemanagemant_system\\consualtance_manage\\controllers\\userauthcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|solutionrelative:controllers\\userauthcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|d:\\consultance\\consultancemanagemant_system\\consualtance_manage\\data\\applicationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|solutionrelative:data\\applicationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|d:\\consultance\\consultancemanagemant_system\\consualtance_manage\\dto\\addsessionlinkdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|solutionrelative:dto\\addsessionlinkdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|d:\\consultance\\consultancemanagemant_system\\consualtance_manage\\controllers\\sessionlinkcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D09CDAC-6A13-4AD6-8175-C7239399A6C0}|Consualtance_Manage.csproj|solutionrelative:controllers\\sessionlinkcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -48,38 +40,27 @@
               "RelativeDocumentMoniker": "Controllers\\KnowdglebaseController.cs",
               "ToolTip": "D:\\Consultance\\ConsultanceManagemant_System\\Consualtance_Manage\\Controllers\\KnowdglebaseController.cs",
               "RelativeToolTip": "Controllers\\KnowdglebaseController.cs",
-              "ViewState": "AgIAAEMAAAAAAAAAAAAkwCcAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAkwE8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-02T14:54:40.661Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AddsessionLinkDTO.cs",
-              "DocumentMoniker": "D:\\Consultance\\ConsultanceManagemant_System\\Consualtance_Manage\\DTO\\AddsessionLinkDTO.cs",
-              "RelativeDocumentMoniker": "DTO\\AddsessionLinkDTO.cs",
-              "ToolTip": "D:\\Consultance\\ConsultanceManagemant_System\\Consualtance_Manage\\DTO\\AddsessionLinkDTO.cs",
-              "RelativeToolTip": "DTO\\AddsessionLinkDTO.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAuwA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T16:40:29.484Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "ApplicationContext.cs",
               "DocumentMoniker": "D:\\Consultance\\ConsultanceManagemant_System\\Consualtance_Manage\\Data\\ApplicationContext.cs",
               "RelativeDocumentMoniker": "Data\\ApplicationContext.cs",
               "ToolTip": "D:\\Consultance\\ConsultanceManagemant_System\\Consualtance_Manage\\Data\\ApplicationContext.cs",
               "RelativeToolTip": "Data\\ApplicationContext.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAA5wA0AAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAA3wA0AAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T16:04:02.164Z"
+              "WhenOpened": "2025-06-01T16:04:02.164Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "UserAuthController.cs",
               "DocumentMoniker": "D:\\Consultance\\ConsultanceManagemant_System\\Consualtance_Manage\\Controllers\\UserAuthController.cs",
               "RelativeDocumentMoniker": "Controllers\\UserAuthController.cs",
@@ -87,32 +68,20 @@
               "RelativeToolTip": "Controllers\\UserAuthController.cs",
               "ViewState": "AgIAADMAAAAAAAAAAAAYwDoAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T15:50:21.662Z"
+              "WhenOpened": "2025-06-01T15:50:21.662Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "SessionLinkController.cs",
               "DocumentMoniker": "D:\\Consultance\\ConsultanceManagemant_System\\Consualtance_Manage\\Controllers\\SessionLinkController.cs",
               "RelativeDocumentMoniker": "Controllers\\SessionLinkController.cs",
               "ToolTip": "D:\\Consultance\\ConsultanceManagemant_System\\Consualtance_Manage\\Controllers\\SessionLinkController.cs",
               "RelativeToolTip": "Controllers\\SessionLinkController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAoAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAIBJwAoAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-31T17:19:35.837Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AppoinmentController.cs",
-              "DocumentMoniker": "D:\\Consultance\\ConsultanceManagemant_System\\Consualtance_Manage\\Controllers\\AppoinmentController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AppoinmentController.cs",
-              "ToolTip": "D:\\Consultance\\ConsultanceManagemant_System\\Consualtance_Manage\\Controllers\\AppoinmentController.cs",
-              "RelativeToolTip": "Controllers\\AppoinmentController.cs",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAYwBUAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-31T17:12:09.683Z",
               "EditorCaption": ""
             }
           ]
