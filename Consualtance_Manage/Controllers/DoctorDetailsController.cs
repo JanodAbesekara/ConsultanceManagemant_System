@@ -26,15 +26,16 @@ namespace Consualtance_Manage.Controllers
             this.emailService = emailService;
         }
 
-        [Authorize(Roles = "Doctor")]
         [HttpPost("AddDoctorDetails")]
         public async Task<ActionResult<DoctorDTO>> AddDoctorDetails(DoctorDTO doctorDTO)
         {
             try
             {
+                var findadddetailslikepatient = await _doctorContext.Patients
+                    .FirstOrDefaultAsync(x => x.UserId == doctorDTO.UserId);
 
                 var doctoretails = await _doctorContext.Doctors
-                      .FirstOrDefaultAsync(x => x.UserId == doctorDTO.UserId);
+                    .FirstOrDefaultAsync(x => x.UserId == doctorDTO.UserId);
 
                 if (doctoretails != null)
                 {
@@ -51,6 +52,12 @@ namespace Consualtance_Manage.Controllers
                     Languages = doctorDTO.Languages,
                     UserId = doctorDTO.UserId
                 };
+
+                
+                if (findadddetailslikepatient != null)
+                {
+                    _doctorContext.Patients.Remove(findadddetailslikepatient); 
+                }
 
                 await _doctorContext.Doctors.AddAsync(newDoctor);
                 await _doctorContext.SaveChangesAsync();
@@ -101,7 +108,7 @@ namespace Consualtance_Manage.Controllers
             }
         }
 
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin,Patient")]
         [HttpGet("GetallDoctors")]
         public async Task<ActionResult<DoctorFullDetails>> allDoctors()
         {

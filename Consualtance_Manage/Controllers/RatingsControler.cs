@@ -94,6 +94,8 @@ namespace Consualtance_Manage.Controllers
                 var doctorRatings = await _context.Ratings
                     .Include(r => r.DoctorDetails)
                         .ThenInclude(d => d.User)
+                    .Include(r => r.patient)
+                       .ThenInclude(p => p.User)
                     .Where(r => r.DoctorId == DoctorID)
                     .ToListAsync();
 
@@ -108,12 +110,22 @@ namespace Consualtance_Manage.Controllers
                     return NotFound("Doctor details not found.");
                 }
 
+                var patient_details = doctorRatings.First().patient?.User;
+                if(patient_details == null)
+                {
+                    return NotFound("Patient details Not found");
+                }
+
                 var averageRating = doctorRatings.Average(r => r.Rating);
 
                 var reviewsList = doctorRatings.Select(r => new RatingReview
                 {
                     Rating = r.Rating,
-                    Review = r.Review ?? ""
+                    Review = r.Review ?? "",
+                    PatientEmail = patient_details.Email,
+                    PatientName = patient_details.Name,
+                    PatientPhone = patient_details.Phone
+
                 }).ToList();
 
                 var result = new DoctorRatingsResponse
@@ -122,7 +134,8 @@ namespace Consualtance_Manage.Controllers
                     DoctorName = doctor.Name,
                     DoctorEmail = doctor.Email,
                     AverageRating = Math.Round(averageRating, 2),
-                    Ratings = reviewsList
+                    Ratings = reviewsList,
+              
                 };
 
                 return Ok(result);

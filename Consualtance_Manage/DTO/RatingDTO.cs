@@ -31,6 +31,7 @@
         public string DoctorName { get; set; } = string.Empty;
         public string DoctorEmail { get; set; } = string.Empty;
         public double AverageRating { get; set; }
+ 
         public List<RatingReview> Ratings { get; set; } = new();
     }
 
@@ -38,6 +39,10 @@
     {
         public int Rating { get; set; }
         public string Review { get; set; } = string.Empty;
+
+        public required string PatientEmail { get; set; }
+        public required string PatientName { get; set; }
+        public required string PatientPhone { get; set; }
     }
 
 }

@@ -1789,6 +1789,10 @@
           "patientName": {
             "type": "string",
             "nullable": true
+          },
+          "patientReports": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -2091,6 +2095,18 @@
             "format": "int32"
           },
           "review": {
+            "type": "string",
+            "nullable": true
+          },
+          "patientEmail": {
+            "type": "string",
+            "nullable": true
+          },
+          "patientName": {
+            "type": "string",
+            "nullable": true
+          },
+          "patientPhone": {
             "type": "string",
             "nullable": true
           }

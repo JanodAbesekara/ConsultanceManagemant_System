@@ -274,7 +274,8 @@ namespace Consualtance_Manage.Controllers
                     Status = ap.Status,
                     PatientName = ap.patient != null ? ap.patient.User.Name : "N/A",
                     PatientEmail = ap.patient != null ? ap.patient.User.Email : "N/A",
-                    PatientLanguages = ap.patient != null ? ap.patient.Languages : "N/A"
+                    PatientLanguages = ap.patient != null ? ap.patient.Languages : "N/A",
+                    PatientReports = ap.patient != null ? ap.patient.Reports: "N/A"
                 }).ToList();
 
                 return Ok(appointmentDetails);

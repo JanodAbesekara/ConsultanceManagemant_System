@@ -21,6 +21,7 @@
 
     public class DoctorSideFulldetail
     {
+     
         public int AppointmentId { get; set; }
         public required DateTime AppointmentDate { get; set; }
         public required string StartTime { get; set; }
@@ -29,6 +30,7 @@
         public required string PatientLanguages { get; set; }
         public required string PatientEmail { get; set; }
         public required string PatientName { get; set; }
+        public required string PatientReports { get; set; }
     }
 
     public class Getallappoinmetn
