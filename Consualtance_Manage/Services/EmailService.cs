@@ -1,4 +1,4 @@
-﻿using MailKit.Net.Smtp;
+using MailKit.Net.Smtp;
 using Microsoft.Extensions.Options;
 using MimeKit;
 
@@ -19,7 +19,7 @@ namespace Consualtance_Manage.Services
             email.To.Add(MailboxAddress.Parse(mailRequest.ToEmail));
             email.Subject = mailRequest.Subject;
             var builder = new BodyBuilder();
-            builder.HtmlBody = mailRequest.Boddy;
+            builder.HtmlBody = mailRequest.Body;
             email.Body = builder.ToMessageBody();
 
 

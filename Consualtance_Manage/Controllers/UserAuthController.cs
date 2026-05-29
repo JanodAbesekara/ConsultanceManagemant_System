@@ -1,8 +1,8 @@
-﻿using Consualtance_Manage.Context;
 using Consualtance_Manage.Data;
 using Consualtance_Manage.DTO;
 using Consualtance_Manage.Models;
 using Consualtance_Manage.Services;
+using Consualtance_Manage.Helpers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -60,7 +60,7 @@ namespace Consualtance_Manage.Controllers
                 MailRequest mailRequest = new MailRequest();
                 mailRequest.ToEmail = userDTO.Email;
                 mailRequest.Subject = "Email Verification";
-                mailRequest.Boddy = $"<h1>Click the link to verify your email</h1><br><a href='http://localhost:3000/verify?email={userDTO.Email}'>Verify Email</a>";
+                mailRequest.Body = $"<h1>Click the link to verify your email</h1><br><a href='http://localhost:3000/verify?email={userDTO.Email}'>Verify Email</a>";
                 await emailService.SendEmailAsync(mailRequest);
            
 
@@ -119,7 +119,7 @@ namespace Consualtance_Manage.Controllers
             {
                 ToEmail = UserEmail,
                 Subject = "Change Your Password",
-                Boddy = $"<h1>Change Your Password</h1><br><a href='http://localhost:3000/Forgetpassword?email={UserEmail}'>Click Here to Reset</a>"
+                Body = $"<h1>Change Your Password</h1><br><a href='http://localhost:3000/Forgetpassword?email={UserEmail}'>Click Here to Reset</a>"
             };
 
             await emailService.SendEmailAsync(mailRequest);
@@ -168,7 +168,7 @@ namespace Consualtance_Manage.Controllers
             MailRequest mailRequest = new MailRequest();
             mailRequest.ToEmail = "janodabesekara91@gmail.com";
             mailRequest.Subject = "Test Email";
-            mailRequest.Boddy = "This is a test email sent from the application.";
+            mailRequest.Body = "This is a test email sent from the application.";
 
             await emailService.SendEmailAsync(mailRequest);
             return Ok("Send Successfully");

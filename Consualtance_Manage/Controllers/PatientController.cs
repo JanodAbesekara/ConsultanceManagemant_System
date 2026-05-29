@@ -1,4 +1,4 @@
-﻿using Consualtance_Manage.Data;
+using Consualtance_Manage.Data;
 using Consualtance_Manage.DTO;
 using Consualtance_Manage.Models;
 using Consualtance_Manage.Services;
@@ -8,7 +8,6 @@ using Microsoft.EntityFrameworkCore;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
-using Consualtance_Manage.Context;
 using Microsoft.IdentityModel.Tokens;
 using System.Numerics;
 using System.Security.Cryptography;
@@ -170,7 +169,7 @@ namespace Consualtance_Manage.Controllers
                 {
                     ToEmail = patient.User.Email,
                     Subject = "Account Deletion Confirmation",
-                    Boddy = $"<h1>Dear {patient.User.Name}, your account has been successfully deleted.</h1>"
+                    Body = $"<h1>Dear {patient.User.Name}, your account has been successfully deleted.</h1>"
                 };
 
                

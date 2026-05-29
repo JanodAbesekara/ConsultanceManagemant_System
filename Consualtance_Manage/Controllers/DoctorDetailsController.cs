@@ -1,4 +1,3 @@
-﻿using Consualtance_Manage.Context;
 using Consualtance_Manage.Data;
 using Consualtance_Manage.DTO;
 using Consualtance_Manage.Models;
@@ -99,13 +98,13 @@ namespace Consualtance_Manage.Controllers
 
         [Authorize(Roles = "Admin")]
         [HttpGet("GetallDoctors")]
-        public async Task<ActionResult<DoctorFullDetails>> allDoctors()
+        public async Task<ActionResult<List<DoctorFullDetails>>> allDoctors()
         {
             try
             {
-                var doctorDetails = _doctorContext.Doctors
+                var doctorDetails = await _doctorContext.Doctors
                     .Include(D => D.User)
-                    .ToList();
+                    .ToListAsync();
 
                 var doctorFullDetails = doctorDetails.Select(D => new DoctorFullDetails
                 {
@@ -118,7 +117,7 @@ namespace Consualtance_Manage.Controllers
                     Email = D.User.Email,
                     Name = D.User.Name,
                     Phone = D.User.Phone,
-                });
+                }).ToList();
 
                 return Ok(doctorFullDetails);
 
@@ -150,7 +149,7 @@ namespace Consualtance_Manage.Controllers
                 {
                     ToEmail = doctorFind.User.Email,
                     Subject = "Account Deletion Confirmation",
-                    Boddy = $"<h1>Dear {doctorFind.User.Name},</h1><p>Your doctor account has been successfully deleted.</p>"
+                    Body = $"<h1>Dear {doctorFind.User.Name},</h1><p>Your doctor account has been successfully deleted.</p>"
                 };
 
                 await emailService.SendEmailAsync(mailRequest);

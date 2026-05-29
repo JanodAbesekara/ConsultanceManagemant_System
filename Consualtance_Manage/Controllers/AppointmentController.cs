@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Consualtance_Manage.Data;
 using Consualtance_Manage.DTO;
 using Consualtance_Manage.Models;
@@ -150,13 +150,13 @@ namespace Consualtance_Manage.Controllers
         {
             try
             {
-                var appoinmentdelete = _context.FindAsync<Appointment>(appointmentId);
-                if (appoinmentdelete == null)
+                var appointmentDelete = await _context.Appointments.FindAsync(appointmentId);
+                if (appointmentDelete == null)
                 {
                     return NotFound("Appointment not found.");
                 }
 
-                _context.Remove(appoinmentdelete);
+                _context.Appointments.Remove(appointmentDelete);
                 await _context.SaveChangesAsync();
 
                 return Ok("Appointment deleted successfully.");

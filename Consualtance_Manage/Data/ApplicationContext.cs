@@ -1,4 +1,4 @@
-﻿using Consualtance_Manage.Models;
+using Consualtance_Manage.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace Consualtance_Manage.Data
@@ -15,7 +15,7 @@ namespace Consualtance_Manage.Data
         public DbSet<Appointment> Appointments { get; set; }
         public DbSet<Ratings> Ratings { get; set; }
         public DbSet<AddtheSessionLink> AddtheSessionLinks { get; set; }
-        public DbSet<KnowdgleBase> KnowdgleBase { get; set; }
+        public DbSet<KnowledgeBase> KnowledgeBase { get; set; }
         public DbSet<RefreashToken> RefreashTokens { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -45,9 +45,9 @@ namespace Consualtance_Manage.Data
                 .HasForeignKey(s => s.UserId)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            // One-to-Many Relationship: User ↔ KnowdgleBase
+            // One-to-Many Relationship: User ↔ KnowledgeBase
             modelBuilder.Entity<User>()
-                .HasMany(u => u.KnowdgleBase)
+                .HasMany(u => u.KnowledgeBase)
                 .WithOne(kb => kb.user)
                 .HasForeignKey(kb => kb.UserId)
                .OnDelete(DeleteBehavior.Restrict);

@@ -1,4 +1,6 @@
-﻿namespace Consualtance_Manage.DTO
+using Consualtance_Manage.DTO;
+
+namespace Consualtance_Manage.Helpers
 {
     public static class CheckRoleBasedPermissions
     {

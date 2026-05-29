@@ -1,4 +1,4 @@
-﻿using Consualtance_Manage.Data;
+using Consualtance_Manage.Data;
 using Consualtance_Manage.DTO;
 using Consualtance_Manage.Models;
 using Microsoft.AspNetCore.Authorization;
@@ -10,11 +10,11 @@ namespace Consualtance_Manage.Controllers
     [Authorize]
     [Route("api/[controller]")]
     [ApiController]
-    public class RatingsControler : Controller
+    public class RatingsController : Controller
     {
         private readonly ApplicationContext _context;
 
-        public RatingsControler(ApplicationContext context)
+        public RatingsController(ApplicationContext context)
         {
             _context = context;
         }
@@ -40,7 +40,7 @@ namespace Consualtance_Manage.Controllers
                     Review = ratingDTO.Review
                 };
 
-                await _context.AddRangeAsync(newrating);
+                await _context.Ratings.AddAsync(newrating);
                 await _context.SaveChangesAsync();
                 return Ok(ratingDTO);
 
@@ -138,15 +138,15 @@ namespace Consualtance_Manage.Controllers
         {
             try
             {
-                var fingRating = await _context.FindAsync<Ratings>(RatingId);
-
-                if(fingRating == null)
-                {
-                    return BadRequest("Rating cant find");
-                }
-
-                _context.Remove(fingRating);
-                _context.SaveChanges();
+                var findRating = await _context.Ratings.FindAsync(RatingId);
+ 
+                 if(findRating == null)
+                 {
+                     return BadRequest("Rating cant find");
+                 }
+ 
+                 _context.Ratings.Remove(findRating);
+                 await _context.SaveChangesAsync();
 
                 return Ok("Rating remove Successfully");
 

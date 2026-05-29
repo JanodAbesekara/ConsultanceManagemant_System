@@ -1,11 +1,11 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
 namespace Consualtance_Manage.DTO
 {
-    public class KnowdgleBaseDTO
+    public class KnowledgeBaseDTO
     {
-        public required int CopntentId { get; set; }
+        public required int ContentId { get; set; }
     
         public required string ContentTopic { get; set; }
     
@@ -15,6 +15,4 @@ namespace Consualtance_Manage.DTO
        
         public required int UserId { get; set; }
     }
-
-    
 }

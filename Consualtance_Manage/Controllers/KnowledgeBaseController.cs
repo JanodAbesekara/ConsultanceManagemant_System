@@ -1,4 +1,4 @@
-﻿using Consualtance_Manage.Data;
+using Consualtance_Manage.Data;
 using Consualtance_Manage.DTO;
 using Consualtance_Manage.Models;
 using Microsoft.AspNetCore.Authorization;
@@ -10,23 +10,23 @@ namespace Consualtance_Manage.Controllers
     [Authorize]
     [Route("api/[controller]")]
     [ApiController]
-    public class KnowdglebaseController : ControllerBase
+    public class KnowledgeBaseController : ControllerBase
     {
         private readonly ApplicationContext _context;
 
-        public KnowdglebaseController(ApplicationContext context)
+        public KnowledgeBaseController(ApplicationContext context)
         {
             _context = context;
         }
 
         [Authorize(Roles = "Doctor")]
         [HttpPost("addContent")]
-        public async Task<ActionResult<KnowdgleBaseDTO>> AddContent(KnowdgleBaseDTO dto)
+        public async Task<ActionResult<KnowledgeBaseDTO>> AddContent(KnowledgeBaseDTO dto)
         {
-            if (await _context.KnowdgleBase.AnyAsync(x => x.ContentTopic == dto.ContentTopic))
+            if (await _context.KnowledgeBase.AnyAsync(x => x.ContentTopic == dto.ContentTopic))
                 return BadRequest("Content already exists");
 
-            var content = new KnowdgleBase
+            var content = new KnowledgeBase
             {
                 ContentTopic = dto.ContentTopic,
                 ContentDescription = dto.ContentDescription,
@@ -34,18 +34,20 @@ namespace Consualtance_Manage.Controllers
                 UserId = dto.UserId
             };
 
-            await _context.KnowdgleBase.AddAsync(content);
+            await _context.KnowledgeBase.AddAsync(content);
             await _context.SaveChangesAsync();
-            return Ok(content);
+            
+            dto.ContentId = content.ContentId;
+            return Ok(dto);
         }
 
         [HttpGet("getAllContent")]
-        public async Task<ActionResult<List<KnowdgleBaseDTO>>> GetAllContent()
+        public async Task<ActionResult<List<KnowledgeBaseDTO>>> GetAllContent()
         {
-            var list = await _context.KnowdgleBase
-                .Select(k => new KnowdgleBaseDTO
+            var list = await _context.KnowledgeBase
+                .Select(k => new KnowledgeBaseDTO
                 {
-                    CopntentId = k.CopntentId,
+                    ContentId = k.ContentId,
                     ContentTopic = k.ContentTopic,
                     ContentDescription = k.ContentDescription,
                     ContentLink = k.ContentLink,
@@ -58,10 +60,10 @@ namespace Consualtance_Manage.Controllers
         [HttpDelete("delete/{id}")]
         public async Task<ActionResult> DeleteByAdmin(int id)
         {
-            var item = await _context.KnowdgleBase.FindAsync(id);
+            var item = await _context.KnowledgeBase.FindAsync(id);
             if (item == null) return NotFound("Content not found");
 
-            _context.KnowdgleBase.Remove(item);
+            _context.KnowledgeBase.Remove(item);
             await _context.SaveChangesAsync();
             return Ok("Deleted");
         }
@@ -69,24 +71,24 @@ namespace Consualtance_Manage.Controllers
         [HttpDelete("deleteByDoctor")]
         public async Task<ActionResult> DeleteByDoctor(int id, int userId)
         {
-            var item = await _context.KnowdgleBase
-                .FirstOrDefaultAsync(x => x.CopntentId == id && x.UserId == userId);
+            var item = await _context.KnowledgeBase
+                .FirstOrDefaultAsync(x => x.ContentId == id && x.UserId == userId);
 
             if (item == null) return NotFound("Content not found or unauthorized");
 
-            _context.KnowdgleBase.Remove(item);
+            _context.KnowledgeBase.Remove(item);
             await _context.SaveChangesAsync();
             return Ok("Deleted by doctor");
         }
 
         [HttpGet("getDoctorContent/{userId}")]
-        public async Task<ActionResult<List<KnowdgleBaseDTO>>> GetDoctorContent(int userId)
+        public async Task<ActionResult<List<KnowledgeBaseDTO>>> GetDoctorContent(int userId)
         {
-            var list = await _context.KnowdgleBase
+            var list = await _context.KnowledgeBase
                 .Where(x => x.UserId == userId)
-                .Select(k => new KnowdgleBaseDTO
+                .Select(k => new KnowledgeBaseDTO
                 {
-                    CopntentId = k.CopntentId,
+                    ContentId = k.ContentId,
                     ContentTopic = k.ContentTopic,
                     ContentDescription = k.ContentDescription,
                     ContentLink = k.ContentLink,

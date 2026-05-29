@@ -3429,23 +3429,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ASUS\\.nuget\\packages\\": {},
+    "C:\\Users\\Janod_Abesekara\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\StudyBuddy\\Backend\\studyBuddy\\ConsultanceManagemant_System\\Consualtance_Manage\\Consualtance_Manage.csproj",
+      "projectUniqueName": "C:\\Users\\Janod_Abesekara\\Desktop\\Projects\\ConsultanceManagemant_System\\Consualtance_Manage\\Consualtance_Manage.csproj",
       "projectName": "Consualtance_Manage",
-      "projectPath": "D:\\StudyBuddy\\Backend\\studyBuddy\\ConsultanceManagemant_System\\Consualtance_Manage\\Consualtance_Manage.csproj",
-      "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "D:\\StudyBuddy\\Backend\\studyBuddy\\ConsultanceManagemant_System\\Consualtance_Manage\\obj\\",
+      "projectPath": "C:\\Users\\Janod_Abesekara\\Desktop\\Projects\\ConsultanceManagemant_System\\Consualtance_Manage\\Consualtance_Manage.csproj",
+      "packagesPath": "C:\\Users\\Janod_Abesekara\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Janod_Abesekara\\Desktop\\Projects\\ConsultanceManagemant_System\\Consualtance_Manage\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Janod_Abesekara\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -3472,7 +3472,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.200"
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net7.0": {
@@ -3544,8 +3544,30 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.312\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1902",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'MailKit' 4.11.0 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-9j88-vvj5-vhgr",
+      "libraryId": "MailKit",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    },
+    {
+      "code": "NU1902",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'MimeKit' 4.11.0 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-g7hc-96xr-gvvx",
+      "libraryId": "MimeKit",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    }
+  ]
 }

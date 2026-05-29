@@ -1,4 +1,4 @@
-﻿using Consualtance_Manage.Data;
+using Consualtance_Manage.Data;
 using Consualtance_Manage.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -14,9 +14,10 @@ namespace Consualtance_Manage.Controllers
         private readonly ApplicationContext _context;
         private readonly IEmailService _emailService;
 
-        public UsermanagerController(ApplicationContext context)
+        public UsermanagerController(ApplicationContext context, IEmailService emailService)
         {
             _context = context;
+            _emailService = emailService;
         }
 
         [Authorize(Roles = "Admin")]
@@ -41,7 +42,7 @@ namespace Consualtance_Manage.Controllers
                 {
                     ToEmail = email,
                     Subject = "Doctor Account Created",
-                    Boddy = $"<h1>Your account has been created as a Doctor. Please log in to your account.</h1>" +
+                    Body = $"<h1>Your account has been created as a Doctor. Please log in to your account.</h1>" +
                     $"<br><a href=\"http://localhost:3000/DoctorHome?email={email}\">Click Here</a>"
                 };
 
@@ -77,9 +78,11 @@ namespace Consualtance_Manage.Controllers
                 {
                     ToEmail = email,
                     Subject = "Admin Account Created",
-                    Boddy = $"<h1>Your account has been created as a Admin. Please log in to your account.</h1>" +
+                    Body = $"<h1>Your account has been created as a Admin. Please log in to your account.</h1>" +
                     $"<br><a href=\"http://localhost:3000/AdminHome?email={email}\">Click Here</a>"
                 };
+
+                await _emailService.SendEmailAsync(mailRequest);
 
                 return Ok("Admin created successfully");
             }

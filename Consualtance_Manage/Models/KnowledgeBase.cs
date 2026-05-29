@@ -1,12 +1,12 @@
-﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Consualtance_Manage.Models
 {
-    public class KnowdgleBase
+    public class KnowledgeBase
     {
         [Key]
-        public int CopntentId { get; set; }
+        public int ContentId { get; set; }
         [Required]
         public string ContentTopic { get;set; }
         [Required]

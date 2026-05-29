@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -39,7 +39,7 @@ namespace Consualtance_Manage.Models
         public virtual DoctorDetails DoctorDetails { get; set; }
 
         // one to many relationship
-        public virtual ICollection<KnowdgleBase> KnowdgleBase { get; set; }
+        public virtual ICollection<KnowledgeBase> KnowledgeBase { get; set; }
 
         // one to many relationship
         public virtual ICollection<AddtheSessionLink> SessionLinks { get; set; } 
